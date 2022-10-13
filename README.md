@@ -33,7 +33,7 @@ These features consist of:
     1. The functionality of the navbar is to make users navigate easier between pages/sections on the website 
     2. When the user clicks on a page name on the navbar, it’ll redirect them to each respective page
     3. The navbar should always be visible and usable wherever the user goes around the website
-    4. Includes access to Authors page and Submissions page
+    4. Includes access to Authors page, Submissions page, along with others.
 - A Hero Section
     1. The hero section will display an image/illustration to let the users know what Conference Event the website Is dedicated to
 - Event Section
@@ -42,10 +42,6 @@ These features consist of:
 - Speakers Section
     1. A button will be used as a CTA(Call-To-Action) for the user to redirect them to the Speakers Page
 - Sessions Section
-    1. A button will be used as a CTA(Call-To-Action) for the user to redirect them to the Sessions Page
-- Authors Section
-    1. A button will be used as a CTA(Call-To-Action) for the user to redirect them to the Sessions Page
-- Submissions Section
     1. A button will be used as a CTA(Call-To-Action) for the user to redirect them to the Sessions Page
 - Venue Map
     1. the Venue Map section will provide a full map of the Conference Event venue.
