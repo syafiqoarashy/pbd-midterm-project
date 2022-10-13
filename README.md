@@ -1,6 +1,9 @@
 # PBD INTERNATIONAL CLASS MIDTERM PROJECT
+
 ## A Proceeding Conference App
+
 ### GROUP 3
+
 1. Syafiqo Arashy Octaviano - 2106657821
 2. Nafis Azizi Riza - 2106658843
 3. Ammar Ash-Shiddiq - 2106656560
@@ -10,15 +13,19 @@
 
 
 ### LINK TO DEPLOYED WEBSITE
+
 [Midterm Project](https://midterm-project-group3ki.herokuapp.com/)
 
 
 ### DESCRIPTION
+
 The app that will be developed is a digital proceeding app for an academic conference. The app will display the information about the conference, such as the schedules, submitted papers, events, speakers, authors and room assignments. There is no need to define any authorization roles (e.g. admin, participant, etc.), meaning anyone can read the information without logging in. The app also has high interactivity, in which the modules are linked to one another. This means that users can easily access any other relevant modules from their current one (e.g. access speakers from events).
 
 
 ### LIST OF MODULES AND FEATURES
+
 #### LANDING PAGE
+
 The website will have a landing page module. The landing page module will be the first thing the user will see when they visit the website. It should contain enough information and features that’ll get them familiar with the website.
 
 These features consist of:
@@ -26,6 +33,7 @@ These features consist of:
     1. The functionality of the navbar is to make users navigate easier between pages/sections on the website 
     2. When the user clicks on a page name on the navbar, it’ll redirect them to each respective page
     3. The navbar should always be visible and usable wherever the user goes around the website
+    4. Includes access to Authors page and Submissions page
 - A Hero Section
     1. The hero section will display an image/illustration to let the users know what Conference Event the website Is dedicated to
 - Event Section
@@ -47,6 +55,7 @@ These features consist of:
 
 
 #### EVENTS PAGE
+
 The events module keeps track of the rundown schedule. This means for each event, the start and end time is recorded as well as its program title, relevant speakers and location. The user is able to interact with certain events. For example, if the event is a parallel session, the user is able to access the parallel sessions page to find out more about said event. On the other hand, if it is a plenary session with a speaker, users are able to interact with the event and find further information on the speaker.
 
 Overall, the data available is:
@@ -69,6 +78,7 @@ To conclude, the events module will have its own page where the rundowns are fil
 
 
 #### SPEAKERS PAGE
+
 In the Speakers module, the web will display a list of **speakers** for the events. It is divided into Plenary Speakers and Keynote Speakers. The page will display a picture of the speaker, the same details as the previous part, sessions they will be speaking at (including, date, time, and session name), and an abstract of the topic each speakers are bringing up.
 
 The data displayed would include:
@@ -92,6 +102,7 @@ The data displayed would include:
 
 
 #### SESSIONS PAGE
+
 In the sessions module, the web page will display information about the topics that will be in session in the event. In each of these topics, there will be all the submitted papers related to that topic grouped based on their date of presentation. Each paper contains information about the author, presentation time and also the abstract of the paper. 
 
 The data that will be displayed are:
@@ -120,6 +131,7 @@ The data that would be displayed in:
 
 
 #### AUTHORS PAGE
+
 Authors will show a list of alphabetically ordered author names and also a search bar. When the user clicks on the name of the authors, it'll go to the author details page which will show:
 1. Author Section
     - Name and Department
@@ -132,6 +144,7 @@ In the paper details page, User can view the Title of the paper and below it are
 
 
 #### SUBMISSIONS PAGE
+
 In the submission modules, the web will display the submitted papers by the authors. The data that will be displayed are:
 - Tracks : which category does the paper included into (such as, SCE for Sustainable and Clean Energy, and etc.)
 - Submission Title
@@ -148,7 +161,9 @@ To be more interactive, when the user click on the authors, it will be redirecte
 
 
 ### INSTRUCTIONS
+
 #### BUILD
+
 The first step in building the app is creating a Django project. Before making the project, a virtual environment should be activated. Once activated, install the required dependencies.
 
 ```bash
@@ -191,6 +206,7 @@ python manage.py startapp <APP_NAME>
 
 
 #### RUN
+
 To run the app locally, use the following code. However, ensure that the virtual environment is up and running beforehand.
 
 ```bash
@@ -201,6 +217,7 @@ Access the app through http://localhost:8000
 
 
 #### DEPLOY
+
 Create a Procfile with the following script:
 
 ```bash
