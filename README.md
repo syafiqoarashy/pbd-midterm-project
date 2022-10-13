@@ -8,7 +8,7 @@
 5. Matthew Rizky Hartadi - 2106720941
 6. Theirry Nicole Panggabean - 2106721004
 
-[Link to Deployed Website](ristek.link/MidtermProjectGroup3KI)
+[Link to Deployed Website](https://midterm-project-group3ki.herokuapp.com/)
 
 ### DESCRIPTION OF OUR APP
 The app that will be developed is a digital proceeding app for an academic conference. The app will display the information about the conference, such as the schedules, submitted papers, events, speakers, authors and room assignments. There is no need to define any authorization roles (e.g. admin, participant, etc.), meaning anyone can read the information without logging in. The app also has high interactivity, in which the modules are linked to one another. This means that users can easily access any other relevant modules from their current one (e.g. access speakers from events).
