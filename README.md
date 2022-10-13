@@ -56,3 +56,56 @@ To implement these features, there would likely need to be a way to implement a 
 URL routing would also need to be implemented towards Speakers and Events, given the user clicks on a certain event.
 
 To conclude, the events module will have its own page where the rundowns are filtered as required by the users, but it will also have interactivity that will lead to sessions and speakers.
+
+#### Speakers Page
+In the Speakers module, the web will display a list of **speaker**s for the events. It is divided into Plenary Speakers and Keynote Speakers. Here, displays a picture of the speaker, the same details as the previous part, sessions they will be speaking at (including, date, time, and session name), and an abstract of the topic each speakers are bringing up.
+
+Datas displayed would include:
+
+1. Name
+2. Respective universities
+3. Country of origin
+
+From there, users would be able to see the **session details** of each speakers by clicking the provided arrow in each speakers section.
+
+Datas displayed would include:
+
+1. Speakers Profile:
+    1. A photo of the speaker
+    2. Respective universities
+    3. Country of Origin
+2. Sessions
+    1. Type of speakers (Plenary/Keynote)
+    2. Session title/topic
+    3. Date and time of session
+    4. Location
+3. Abstract (an explanation of the topic)
+
+#### Sessions Page
+In the sessions module,  The web page will display information about the topics that will be in session in the event. In each of these topics, there will be all the submitted papers related to that topic grouped based on their date of presentation. Inside of each paper will contain information about the author, presentation time and also the abstract of the paper. 
+
+The data that will displayed are:
+
+- Paper id
+- Room number
+- Session of presentation of the day
+- Topics of the paper (displayed to user)
+- Submitted paper title (displayed to user)
+- The author (displayed to user)
+- Date of presentation (displayed to user)
+- Time of presentation (displayed to user)
+- Location of presentation (displayed to user)
+- Start time of presentation (displayed to user)
+- End time of presentation (displayed to user)
+
+The data that would be displayed in :
+
+1. Parallel Sessions : 
+    1. Topics of the paper
+2. Sessions:
+    1. Submitted paper title
+    2. Author of paper
+3. Paper detail:
+    1. Paper title
+    2. Author
+    3. Abstract of paper
