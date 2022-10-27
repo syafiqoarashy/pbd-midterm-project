@@ -4,6 +4,8 @@
 
 ### GROUP 3
 
+Syafiqo's Branch for Landing Page
+
 1. Syafiqo Arashy Octaviano - 2106657821
 2. Nafis Azizi Riza - 2106658843
 3. Ammar Ash-Shiddiq - 2106656560
