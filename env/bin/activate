@@ -38,7 +38,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="/Volumes/GoogleDrive/My Drive/CSUI/TERM 3/PBP/pbd-midterm-project/env"
+VIRTUAL_ENV="/Users/azrahisman/pbd-midterm-project/pbd-midterm-project-group3ki/env"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

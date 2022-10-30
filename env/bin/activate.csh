@@ -8,7 +8,7 @@ alias deactivate 'test $?_OLD_VIRTUAL_PATH != 0 && setenv PATH "$_OLD_VIRTUAL_PA
 # Unset irrelevant variables.
 deactivate nondestructive
 
-setenv VIRTUAL_ENV "/Volumes/GoogleDrive/My Drive/CSUI/TERM 3/PBP/pbd-midterm-project/env"
+setenv VIRTUAL_ENV "/Users/azrahisman/pbd-midterm-project/pbd-midterm-project-group3ki/env"
 
 set _OLD_VIRTUAL_PATH="$PATH"
 setenv PATH "$VIRTUAL_ENV/bin:$PATH"

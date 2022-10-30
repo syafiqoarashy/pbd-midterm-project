@@ -1,6 +1,4 @@
-#!/bin/sh
-'''exec' "/Volumes/GoogleDrive/My Drive/CSUI/TERM 3/PBP/pbd-midterm-project/env/bin/python3" "$0" "$@"
-' '''
+#!/Users/azrahisman/pbd-midterm-project/pbd-midterm-project-group3ki/env/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys
