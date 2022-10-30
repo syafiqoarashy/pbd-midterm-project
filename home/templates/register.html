@@ -6,19 +6,25 @@
 
 {% block content %}
 
-<div class = "login">
-    <h1>Registration Form</h1>
 
-        <form method="POST" >
-            {% csrf_token %}
-            <table>
-                {{ form.as_table }}
-                <tr>
-                    <td></td>
-                    <td><input type="submit" name="submit" value="Register"/></td>
-                </tr>
-            </table>
-        </form>
+<h3>Register here</h3>
+<hr>
+
+<form action="" method="POST">
+    {% csrf_token %}
+
+    {% for field in form %}
+        <div>
+            <p>{{ field.label }}: <br> {{ field }}</p> 
+
+            {% for error in field.errors %}
+                <small style="color: red">{{ error }}</small>
+            {% endfor %}
+        </div>
+    {% endfor %}
+    <button type="submit">Register</button>
+    
+</form>
 
     {% if messages %}
         <ul>

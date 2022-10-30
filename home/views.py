@@ -28,7 +28,7 @@ def register(request):
         if form.is_valid():
             form.save()
             messages.success(request, 'Account successfully created!')
-            return redirect('wishlist:login')
+            return redirect('home:login')
 
     context = {'form':form}
     return render(request, 'register.html', context)
