@@ -3,11 +3,8 @@ from django.contrib.auth import authenticate, login
 from django.shortcuts import redirect
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib import messages
-from .forms import ContactForm
 
 def landing(request):
-    form = ContactForm()
-    context = {'form': form}
     return render(request, 'index.html')
 
 def login_user(request):
