@@ -7,7 +7,7 @@ def user_directory_path(filename):
     return f'speakers/2019/{filename}'
 
 class Speakers(models.Model):
-    id = models.CharField(max_length=10, primary_key=True)
+    id = models.IntegerField(primary_key=True)
     name = models.CharField(max_length=50)
     affiliation = models.CharField(max_length=75)
     country = models.CharField(max_length=30)

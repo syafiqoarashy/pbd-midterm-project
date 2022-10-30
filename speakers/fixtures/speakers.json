@@ -3,7 +3,7 @@
         "model": "speakers.speakers",
         "pk": 1,
         "fields": {
-            "id": "speaker1",
+            "id": 1,
             "name": "Prof. Bondan Tiara Sofyan",
             "affiliation": "Directorate General of Defence Potential, Ministry of Defence",
             "country": "Indonesia",
@@ -22,7 +22,7 @@
         "model": "speakers.speakers",
         "pk": 2,
         "fields": {
-            "id": "speaker2",
+            "id": 2,
             "name": "Prof. Aya Hagishima",
             "affiliation": "Kyushu University",
             "country": "Japan",
@@ -41,7 +41,7 @@
         "model": "speakers.speakers",
         "pk": 3,
         "fields": {
-            "id": "speaker3",
+            "id": 3,
             "name": "Prof. Eung Ryul Baek",
             "affiliation": "Yeungnam University",
             "country": "South Korea",
@@ -60,7 +60,7 @@
         "model": "speakers.speakers",
         "pk": 4,
         "fields": {
-            "id": "speaker4",
+            "id": 4,
             "name": "Prof. dr. ir. H.J. (Erik) Heeres",
             "affiliation": "University of Groningen",
             "country": "The Netherlands",
@@ -79,7 +79,7 @@
         "model": "speakers.speakers",
         "pk": 5,
         "fields": {
-            "id": "speaker5",
+            "id": 5,
             "name": "Prof. Masato Tominaga",
             "affiliation": "Saga University",
             "country": "Japan",
@@ -98,7 +98,7 @@
         "model": "speakers.speakers",
         "pk": 6,
         "fields": {
-            "id": "speaker6",
+            "id": 6,
             "name": "Prof. Jerome Charmet",
             "affiliation": "Warwick University",
             "country": "England",
@@ -117,7 +117,7 @@
         "model": "speakers.speakers",
         "pk": 7,
         "fields": {
-            "id": "speaker7",
+            "id": 7,
             "name": "Prof. Shuo-Yan Chou",
             "affiliation": "National Taiwan University of Science and Technology",
             "country": "Taiwan",
@@ -136,7 +136,7 @@
         "model": "speakers.speakers",
         "pk": 8,
         "fields": {
-            "id": "speaker8",
+            "id": 8,
             "name": "Prof. Lisa Scharoun",
             "affiliation": "Queensland University of Technology",
             "country": "Australia",
@@ -155,7 +155,7 @@
         "model": "speakers.speakers",
         "pk": 9,
         "fields": {
-            "id": "speaker9",
+            "id": 9,
             "name": "Prof. Alexander Paz",
             "affiliation": "Queensland University of Technology",
             "country": "Australia",
@@ -174,7 +174,7 @@
         "model": "speakers.speakers",
         "pk": 10,
         "fields": {
-            "id": "speaker10",
+            "id": 10,
             "name": "Prof. Ruth Steiner",
             "affiliation": "University of Florida",
             "country": "USA",
@@ -193,7 +193,7 @@
         "model": "speakers.speakers",
         "pk": 11,
         "fields": {
-            "id": "speaker11",
+            "id": 11,
             "name": "Dian K. Suprapto",
             "affiliation": "TUV Rheinland Indonesia",
             "country": "Indonesia",
@@ -211,7 +211,7 @@
         "model": "speakers.speakers",
         "pk": 12,
         "fields": {
-            "id": "Speaker12",
+            "id": 12,
             "name": "Prof. Dr.-Ing Azhar Zam",
             "affiliation": "University of Basel",
             "country": "Switzerland",
@@ -230,7 +230,7 @@
         "model": "speakers.speakers",
         "pk": 13,
         "fields": {
-            "id": "Speaker13",
+            "id": 13,
             "name": "Prof. Muhammad Hussain Ismail",
             "affiliation": "Universiti Teknologi MARA",
             "country": "Malaysia",
