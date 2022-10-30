@@ -12,6 +12,51 @@
 </head>
 
 <body>
+
+  
+
+<!-- Main modal -->
+<div id="modal" tabindex="-1" aria-hidden="true" class="hidden bg-white bg-opacity-50 overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full flex justify-center items-center">
+    <div class="relative p-4 w-full max-w-md h-full md:h-auto">
+        <!-- Modal content -->
+        <div class="relative bg-white rounded-lg shadow">
+            <button id="close_testimonial" type="button" class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center">
+                <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                <span class="sr-only">Close modal</span>
+            </button>
+            <div class="py-6 px-6 lg:px-8">
+                <h3 class="mb-4 text-2xl font-bold text-gray-900">Your opinion about us is very <strong class="font-extrabold text-[#412D7E]">helpful!
+                </strong></h3>
+                <form method="POST" class="space-y-6" action="#" id="task_form">
+                  {% csrf_token %}
+                    <div>
+                        <label for="username" class="block mb-2 text-sm font-medium text-gray-900">Your name</label>
+                        <input type="username" name="username" id="username" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Matthew Rizky Hartadi" required="">
+                    </div>
+                    <div>
+                        <label for="content" class="block mb-2 text-sm font-medium text-gray-900">Your testimony</label>
+                        <input type="content" name="content" id="content" placeholder="Very nice!" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" required="">
+                    </div>
+                    <div>
+                      <label for="institute" class="block mb-2 text-sm font-medium text-gray-900">Your institute</label>
+                      <input type="institute" name="institute" id="institute" placeholder="Universitas Indonesia" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" required="">
+                  </div>
+                    
+                    <button type="submit" class="w-full text-black bg-[#FED307] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Share your thoughts</button>
+                </form>
+                {% if messages %}
+                    <ul>
+                        {% for message in messages %}
+                            <li class="mt-4 text-center text-sm">{{ message }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div> 
+
+
   <header aria-label="Site Header" class="top-0 shadow-xl bg-white">
     <div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
       <div class="flex h-24 items-center justify-between">
@@ -90,17 +135,9 @@
                 class="rounded-md bg-[#412D7E] h-full px-5 py-2.5 text-sm font-medium text-white shadow"
                 href="{% url 'home:login' %}"
               >
-                Login
+                Logout
               </a>
   
-              <div class="hidden sm:flex">
-                <a
-                  class="rounded-md bg-gray-100 px-5 py-2.5 text-sm font-medium text-[#1C3265]"
-                  href="{% url 'home:register' %}"
-                >
-                  Register
-                </a>
-              </div>
             </div>
   
             <div class="block lg:hidden">
@@ -326,6 +363,7 @@
 
   <div id="carouselExampleControls" class="carousel slide relative p-8" data-bs-ride="carousel">
     <div class="carousel-inner relative w-full overflow-hidden" id="testimoni">
+
       <!-- testimonial card
       <div class="carousel-item active relative float-left w-full">
         <div class="mx-auto max-w-screen px-4 py-8">
@@ -372,8 +410,8 @@
               </div>
           </section>
         </div>
-      </div> -->
-
+      </div>
+      -->
     </div>
     <div class="px-80">
       <button
@@ -397,7 +435,16 @@
     </div>
     
   </div>
+  <div class="flex justify-center">
+    <button >
+      <a class="inline-block rounded border border-indigo-600 bg-[#FED307] 
+      px-12 py-3 text-sm font-medium text-black hover:bg-[#EEC501] 
+      "
+      id="open_testimonial">Add your own</a>
+    </button>
+  </div>
   
+
   <footer aria-label="Site Footer" class="bg-gray-50 mt-8">
     <div class="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 lg:px-8">
       <div class="sm:flex sm:items-center sm:justify-between">
@@ -449,6 +496,26 @@
       </div>
     `
   });
+  let modal = document.querySelector("#modal")
+  let closeButton = document.querySelector("#close_testimonial")
+  let openButton = document.querySelector("#open_testimonial")
+
+  closeButton.addEventListener("click", () =>
+    {
+      modal.classList.remove("flex");
+      modal.classList.add("hidden");
+      reset();
+    });
+  
+  openButton.addEventListener("click", () =>
+    {
+      modal.classList.add("flex");
+      modal.classList.remove("hidden");
+    });
+
+  function reset(){
+    $("#task_form").trigger("reset");
+  };
 
   function add_testimonial(e){
     $("#testimoni").append(card(e));
@@ -462,6 +529,27 @@
       });
     };
   
+    $("#task_form").submit((event) => {
+            event.preventDefault();
+            if ($("#username").val() && $("#content").val() && $("#institute").val()) {
+                $.ajax({
+                type: "POST",
+                url: "{% url 'home:add' %}",
+                data: {title: $("#title").val(), description: $("#description").val()},
+                headers: {"X-CSRFToken": document.querySelector("[name=csrfmiddlewaretoken]").value},
+                success: function(result) {
+                    modal.classList.remove("flex");
+                    modal.classList.add("hidden");
+                    reset();
+                    add_testimonial(result);
+                },
+                });
+            } else {
+                alert("Please fill the title/description!");
+            }
+            });
+
   show_testimonials();
 </script>
+
 {% endblock content %}
