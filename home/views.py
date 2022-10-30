@@ -67,7 +67,7 @@ def create_testimonial(request):
                     "fields": {
                         "username": data.username,
                         "content": data.content,
-                        "instite": data.institute,
+                        "institute": data.institute,
                     },
                 },
                 status=200,
@@ -81,5 +81,5 @@ def logout_user(request):
 
 @login_required(login_url='/todolist/login/')
 def show_data_json(request):
-    data = Testimonial.objects.all
+    data = Testimonial.objects.all()
     return HttpResponse(serializers.serialize("json", data), content_type="application/json")
