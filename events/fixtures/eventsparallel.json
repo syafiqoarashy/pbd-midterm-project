@@ -1,249 +1,240 @@
 [
   {
     "model": "events.eventsparallel",
-    "pk": "p1",
+    "pk": 1,
     "fields": {
-        "eventId": "event13",
-        "date": "23-07-2019",
-        "startTime": "13:00",
-        "endTime": "18:00",
-        "program": "Infrastructure, and transport",
-        "speaker": "",
-        "place": "OMBILIN 1"
+      "eventId": "13",
+      "date": "2019-07-23",
+      "startTime": "13:00",
+      "endTime": "18:00",
+      "program": "2",
+      "speaker": "9",
+      "place": "OMBILIN 1"
     }
   },
   {
     "model": "events.eventsparallel",
-    "pk": "p2",
+    "pk": 2,
     "fields": {
-        "eventId": "event13",
-        "date": "23-07-2019",
-        "startTime": "13:00",
-        "endTime": "18:00",
-        "program": "Advances in Mechanical Engineering",
-        "speaker": "",
-        "place": "ANAI 1-2"
+      "eventId": "13",
+      "date": "2019-07-23",
+      "startTime": "13:00",
+      "endTime": "18:00",
+      "program": "3",
+      "speaker": "6",
+      "place": "ANAI 1-2"
     }
   },
   {
     "model": "events.eventsparallel",
-    "pk": "p3",
+    "pk": 3,
     "fields": {
-        "eventId": "event13",
-        "date": "23-07-2019",
-        "startTime": "13:00",
-        "endTime": "18:00",
-        "program": "Biotechnology and Bioprocess Engineering",
-        "speaker": "",
-        "place": "SEMPUR, SINAMAR"
+      "eventId": "13",
+      "date": "2019-07-23",
+      "startTime": "13:00",
+      "endTime": "18:00",
+      "program": "4",
+      "place": "SEMPUR, SINAMAR"
     }
   },
   {
     "model": "events.eventsparallel",
-    "pk": "p4",
+    "pk": 4,
     "fields": {
-        "eventId": "event13",
-        "date": "23-07-2019",
-        "startTime": "13:00",
-        "endTime": "18:00",
-        "program": "Chemical Process and Engineering",
-        "speaker": "",
-        "place": "OMBILIN 2-3"
+      "eventId": "13",
+      "date": "2019-07-23",
+      "startTime": "13:00",
+      "endTime": "18:00",
+      "program": "5",
+      "speaker": "5",
+      "place": "OMBILIN 2-3"
     }
   },
   {
     "model": "events.eventsparallel",
-    "pk": "p5",
+    "pk": 5,
     "fields": {
-        "eventId": "event13",
-        "date": "23-07-2019",
-        "startTime": "13:00",
-        "endTime": "18:00",
-        "program": "Sustainable Building, City, and Community",
-        "speaker": "",
-        "place": "KUANTAN 1-2"
+      "eventId": "13",
+      "date": "2019-07-23",
+      "startTime": "13:00",
+      "endTime": "18:00",
+      "program": "6",
+      "speaker": "8",
+      "place": "KUANTAN 1-2"
     }
   },
   {
     "model": "events.eventsparallel",
-    "pk": "p6",
+    "pk": 6,
     "fields": {
-        "eventId": "event13",
-        "date": "23-07-2019",
-        "startTime": "13:00",
-        "endTime": "18:00",
-        "program": "Electrical and Computer Engineering",
-        "speaker": "",
-        "place": "ARAI"
+      "eventId": "13",
+      "date": "2019-07-23",
+      "startTime": "13:00",
+      "endTime": "18:00",
+      "program": "7",
+      "speaker": "7",
+      "place": "ARAI"
     }
   },
   {
     "model": "events.eventsparallel",
-    "pk": "p7",
+    "pk": 7,
     "fields": {
-        "eventId": "event13",
-        "date": "23-07-2019",
-        "startTime": "13:00",
-        "endTime": "18:00",
-        "program": "Metallurgy and Materials Engineering",
-        "speaker": "",
-        "place": "TARUSAN 1-2"
+      "eventId": "13",
+      "date": "2019-07-23",
+      "startTime": "13:00",
+      "endTime": "18:00",
+      "program": "8",
+      "speaker": "3",
+      "place": "TARUSAN 1-2"
     }
   },
   {
     "model": "events.eventsparallel",
-    "pk": "p8",
+    "pk": 8,
     "fields": {
-        "eventId": "event13",
-        "date": "23-07-2019",
-        "startTime": "13:00",
-        "endTime": "18:00",
-        "program": "Industrial Engineering",
-        "speaker": "",
-        "place": "KUANTAN 3"
+      "eventId": "13",
+      "date": "2019-07-23",
+      "startTime": "13:00",
+      "endTime": "18:00",
+      "program": "9",
+      "place": "KUANTAN 3"
     }
   },
   {
     "model": "events.eventsparallel",
-    "pk": "p9",
+    "pk": 9,
     "fields": {
-        "eventId": "event13",
-        "date": "23-07-2019",
-        "startTime": "13:00",
-        "endTime": "18:00",
-        "program": "Biomedical Engineering",
-        "speaker": "",
-        "place": "SEMPUR, SINAMAR"
+      "eventId": "13",
+      "date": "2019-07-23",
+      "startTime": "13:00",
+      "endTime": "18:00",
+      "program": "10",
+      "speaker": "13",
+      "place": "SEMPUR, SINAMAR"
     }
   },
   {
     "model": "events.eventsparallel",
-    "pk": "p10",
+    "pk": 10,
     "fields": {
-        "eventId": "event16",
-        "date": "24-07-2019",
-        "startTime": "8:00",
-        "endTime": "18:00",
-        "program": "Sustainable and Clean Energy",
-        "speaker": "",
-        "place": "OMBILIN 1"
+      "eventId": "16",
+      "date": "2019-07-24",
+      "startTime": "8:00",
+      "endTime": "18:00",
+      "program": "1",
+      "place": "OMBILIN 1"
     }
   },
   {
     "model": "events.eventsparallel",
-    "pk": "p11",
+    "pk": 11,
     "fields": {
-        "eventId": "event16",
-        "date": "24-07-2019",
-        "startTime": "10:15",
-        "endTime": "12:00",
-        "program": "Infrastructure, and transport",
-        "speaker": "",
-        "place": "KUANTAN 1-2"
+      "eventId": "16",
+      "date": "2019-07-24",
+      "startTime": "10:15",
+      "endTime": "12:00",
+      "program": "2",
+      "speaker": "10",
+      "place": "KUANTAN 1-2"
     }
   },
   {
     "model": "events.eventsparallel",
-    "pk": "p12",
+    "pk": 12,
     "fields": {
-        "eventId": "event16",
-        "date": "24-07-2019",
-        "startTime": "8:00",
-        "endTime": "18:00",
-        "program": "Advances in Mechanical Engineering",
-        "speaker": "",
-        "place": "ANAI 1-2, KUANTAN 3"
+      "eventId": "16",
+      "date": "2019-07-24",
+      "startTime": "8:00",
+      "endTime": "18:00",
+      "program": "3",
+      "place": "ANAI 1-2, KUANTAN 3"
     }
   },
   {
     "model": "events.eventsparallel",
-    "pk": "p13",
+    "pk": 13,
     "fields": {
-        "eventId": "event16",
-        "date": "24-07-2019",
-        "startTime": "8:00",
-        "endTime": "18:00",
-        "program": "Biotechnology and Bioprocess Engineering",
-        "speaker": "",
-        "place": "SEMPUR"
+      "eventId": "16",
+      "date": "2019-07-24",
+      "startTime": "8:00",
+      "endTime": "18:00",
+      "program": "4",
+      "place": "SEMPUR"
     }
   },
   {
     "model": "events.eventsparallel",
-    "pk": "p14",
+    "pk": 14,
     "fields": {
-        "eventId": "event16",
-        "date": "24-07-2019",
-        "startTime": "8:00",
-        "endTime": "18:00",
-        "program": "Chemical Process and Engineering",
-        "speaker": "",
-        "place": "OMBILIN 2-3"
+      "eventId": "16",
+      "date": "2019-07-24",
+      "startTime": "8:00",
+      "endTime": "18:00",
+      "program": "5",
+      "place": "OMBILIN 2-3"
     }
   },
   {
     "model": "events.eventsparallel",
-    "pk": "p15",
+    "pk": 15,
     "fields": {
-        "eventId": "event16",
-        "date": "24-07-2019",
-        "startTime": "8:00",
-        "endTime": "18:00",
-        "program": "Sustainable Building, City, and Community",
-        "speaker": "",
-        "place": "KUANTAN 1-2"
+      "eventId": "16",
+      "date": "2019-07-24",
+      "startTime": "8:00",
+      "endTime": "18:00",
+      "program": "6",
+      "speaker": "10",
+      "place": "KUANTAN 1-2"
     }
   },
   {
     "model": "events.eventsparallel",
-    "pk": "p16",
+    "pk": 16,
     "fields": {
-        "eventId": "event16",
-        "date": "24-07-2019",
-        "startTime": "8:00",
-        "endTime": "18:00",
-        "program": "Electrical and Computer Engineering",
-        "speaker": "",
-        "place": "ARAI"
+      "eventId": "16",
+      "date": "2019-07-24",
+      "startTime": "8:00",
+      "endTime": "18:00",
+      "program": "7",
+      "place": "ARAI"
     }
   },
   {
     "model": "events.eventsparallel",
-    "pk": "p17",
+    "pk": 17,
     "fields": {
-        "eventId": "event16",
-        "date": "24-07-2019",
-        "startTime": "8:00",
-        "endTime": "18:00",
-        "program": "Metallurgy and Materials Engineering",
-        "speaker": "",
-        "place": "TARUSAN 1-2"
+      "eventId": "16",
+      "date": "2019-07-24",
+      "startTime": "8:00",
+      "endTime": "18:00",
+      "program": "8",
+      "place": "TARUSAN 1-2"
     }
   },
   {
     "model": "events.eventsparallel",
-    "pk": "p18",
+    "pk": 18,
     "fields": {
-        "eventId": "event16",
-        "date": "24-07-2019",
-        "startTime": "8:00",
-        "endTime": "14:00",
-        "program": "Industrial Engineering",
-        "speaker": "",
-        "place": "KUANTAN 3"
+      "eventId": "16",
+      "date": "2019-07-24",
+      "startTime": "8:00",
+      "endTime": "14:00",
+      "program": "9",
+      "place": "KUANTAN 3"
     }
   },
   {
     "model": "events.eventsparallel",
-    "pk": "p19",
+    "pk": 19,
     "fields": {
-        "eventId": "event16",
-        "date": "24-07-2019",
-        "startTime": "8:00",
-        "endTime": "18:00",
-        "program": "Biomedical Engineering",
-        "speaker": "",
-        "place": "SEMPUR, SINAMAR, BATANDANG"
+      "eventId": "16",
+      "date": "2019-07-24",
+      "startTime": "8:00",
+      "endTime": "18:00",
+      "program": "10",
+      "speaker": "12",
+      "place": "SEMPUR, SINAMAR, BATANDANG"
     }
   }
 ]

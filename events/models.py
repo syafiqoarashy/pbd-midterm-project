@@ -16,13 +16,8 @@ class Speakers(models.Model):
     room = models.CharField(max_length=50)
     symposium = models.CharField(max_length=15)
 
-
-class Tracks(models.Model):
-    symposium = models.CharField(max_length=5)
-    title = models.CharField(max_length=50)
-
-
 class EventsGeneral(models.Model):
+    id = models.CharField(max_length=3, primary_key=True)
     date = models.DateField()
     startTime = models.CharField(max_length=15)
     endTime = models.CharField(max_length=15)
@@ -32,10 +27,18 @@ class EventsGeneral(models.Model):
     isParallel = models.BooleanField()
 
 
+class Track2(models.Model):
+    id = models.CharField(max_length=5, primary_key=True)
+    symposium = models.CharField(max_length=5)
+    title = models.CharField(max_length=100)
+
+
 class EventsParallel(models.Model):
-    eventId = models.ForeignKey(EventsGeneral, on_delete=models.RESTRICT)
+    eventId = models.ForeignKey(EventsGeneral, on_delete=models.RESTRICT, blank=True, null=True, default=0)
     date = models.DateField()
-    time = models.CharField(max_length=15)
-    program = models.ForeignKey(Tracks, on_delete=models.RESTRICT)
+    startTime = models.CharField(max_length=15)
+    endTime = models.CharField(max_length=15)
+    program = models.ForeignKey(Track2, on_delete=models.RESTRICT)
     speaker = models.ForeignKey(Speakers, blank=True, null=True, on_delete=models.RESTRICT)
     place = models.CharField(max_length=50)
+

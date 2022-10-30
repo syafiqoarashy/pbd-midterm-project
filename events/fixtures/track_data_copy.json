@@ -1,0 +1,92 @@
+[
+    {
+        "model": "events.track2",
+        "pk": 1,
+        "fields": {
+            "id": "1",
+            "symposium": "SCE",
+            "title": "Sustainable and Clean Energy"
+        }
+    },
+    {
+        "model": "events.track2",
+        "pk": 2,
+        "fields": {
+            "id": "2",
+            "symposium": "IT",
+            "title": "Infrastructure, and transport"
+        }
+    },
+    {
+        "model": "events.track2",
+        "pk": 3,
+        "fields": {
+            "id": "3",
+            "symposium": "AME",
+            "title": "Advances in Mechanical Engineering"
+        }
+    },
+    {
+        "model": "events.track2",
+        "pk": 4,
+        "fields": {
+            "id": "4",
+            "symposium": "BBE",
+            "title": "Biotechnology and Bioprocess Engineering"
+        }
+    },
+    {
+        "model": "events.track2",
+        "pk": 5,
+        "fields": {
+            "id": "5",
+            "symposium": "CPE",
+            "title": "Chemical Process and Engineering"
+        }
+    },
+    {
+        "model": "events.track2",
+        "pk": 6,
+        "fields": {
+            "id": "6",
+            "symposium": "SBCC",
+            "title": "Sustainable Building, City, and Community"
+        }
+    },
+    {
+        "model": "events.track2",
+        "pk": 7,
+        "fields": {
+            "id": "7",
+            "symposium": "ECE",
+            "title": "Electrical and Computer Engineering"
+        }
+    },
+    {
+        "model": "events.track2",
+        "pk": 8,
+        "fields": {
+            "id": "8",
+            "symposium": "MME",
+            "title": "Metallurgy and Materials Engineering"
+        }
+    },
+    {
+        "model": "events.track2",
+        "pk": 9,
+        "fields": {
+            "id": "9",
+            "symposium": "IE",
+            "title": "Industrial Engineering"
+        }
+    },
+    {
+        "model": "events.track2",
+        "pk": 10,
+        "fields": {
+            "id": "10",
+            "symposium": "ISBE",
+            "title": "Biomedical Engineering"
+        }
+    }
+]
