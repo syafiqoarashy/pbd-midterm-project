@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     #'django_filters',
     'home',
+    'speakers',
     'events',
     'authors',
     'submission',

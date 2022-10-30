@@ -2,7 +2,11 @@
 
 ## A Proceeding Conference App
 
+<<<<<<< HEAD
 ## Landing Page Branch by Syafiqo
+=======
+## Speakers Branch by Azra
+>>>>>>> 09a59b96739f38a242ca07191ec4dfac7e9e5c92
 
 ### GROUP 3
 

@@ -1,6 +1,5 @@
 from django.shortcuts import render
 from submission.models import Track, Submission
-from  .filters import SubmissionFilter
 from django.http import HttpResponse
 from django.core import serializers
 
