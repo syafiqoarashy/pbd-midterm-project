@@ -45,8 +45,8 @@ INSTALLED_APPS = [
     #'django_filters',
     'home',
     'events',
+    'authors',
     'submission',
-    'authors'
 ]
 
 MIDDLEWARE = [

@@ -38,7 +38,7 @@ class EventsParallel(models.Model):
     date = models.DateField()
     startTime = models.CharField(max_length=15)
     endTime = models.CharField(max_length=15)
-    program = models.ForeignKey(Track2, on_delete=models.RESTRICT)
+    program = models.ForeignKey('submission.Track', on_delete=models.RESTRICT)
     speaker = models.ForeignKey(Speakers, blank=True, null=True, on_delete=models.RESTRICT)
     place = models.CharField(max_length=50)
 

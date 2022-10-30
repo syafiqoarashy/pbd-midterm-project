@@ -3,7 +3,7 @@ from django.shortcuts import render
 # Create your views here.
 from django.shortcuts import render
 
-from authors.filters import AuthorsFilter
+#from authors.filters import AuthorsFilter
 from .models import *
 from django.http import HttpResponse
 from django.core import serializers
