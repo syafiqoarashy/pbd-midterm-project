@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<p class="text-center my-10 text-5xl font-bold">Paper Submission</p>
+
+<form method="get">
+    
+    <p class="mb-3 mx-64 text-xl text-gray-500">Search for submitted papers by all participants</p>
+    <div class="mx-64 flex justify-center">
+        <select name="trackId" id="id_trackId" class="mx-3 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+            <option selected>Track</option>
+            <option value="1">SCE</option>
+            <option value="2">IT</option>
+            <option value="3">AME</option>
+            <option value="4">BBE</option>
+            <option value="5">CPE</option>
+            <option value="6">SBCC</option>
+            <option value="7">ECE</option>
+            <option value="8">MME</option>
+            <option value="9">IE</option>
+            <option value="10">ISBE</option>
+        </select>
+
+        <input type="text" name="title__icontains" id="id_title__icontains" class="mx-3 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Title">
+
+        <input type="text" name="authors__icontains" id="id_authors__icontains" class="mx-3 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Author(s)">
+        
+        <button type="submit" class="mx-3 inline-flex items-center py-2.5 px-3 ml-2 text-sm font-medium text-white bg-blue-700 rounded-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+            <svg aria-hidden="true" class="mr-2 -ml-1 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>Search
+        </button>
+    </div>
+
+</form>
+
+<div class="grid justify-items-center my-10" id="rowcontainer">
+
+</div>
+
+<script>src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"</script>
+
+<script>
+
+    async function getSubmission() {
+        return fetch("{% url 'submission:show_json' %}").then((res) => res.json())
+    }
+  
+    async function refreshSubmission() {
+        document.getElementById("rowcontainer").innerHTML = ""
+        const submission = await getSubmission()
+        let htmlString = ``
+        submission.forEach((item) => {
+            htmlString += `
+            <div class="min-w-[768px] max-w-3xl rounded overflow-hidden shadow-md" style="cursor: pointer" onclick="details(${item.pk})">
+                <div class="px-6 py-4">
+                    <div class="font-bold text-xl">${item.fields.title}</div>
+                    <p class="text-gray-500 text-base text-sm  mb-2">
+                        Last Updated : ${item.fields.lastUpdated}
+                    </p>
+                    <p class="text-gray-700 text-base">
+                        ${item.fields.authors}
+                    </p>
+                    <p class="text-gray-500 text-base text-sm italic">
+                        Keywords: ${item.fields.keywords}
+                    </p>
+                </div>
+                <div class="px-6 pt-4 pb-2">
+                    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">${item.fields.trackId}</span>
+                </div>
+            </div>`
+        })
+        document.getElementById("rowcontainer").innerHTML = htmlString
+    }
+    
+    function details(val) {
+        window.location.href = "{% url 'submission:show_details_by_id' 0 %}".replace("0", val);
+    }
+
+    refreshSubmission()
+
+</script>
+
+{% endblock content %}
