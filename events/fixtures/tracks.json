@@ -1,0 +1,82 @@
+[
+  {
+    "model": "events.tracks",
+    "pk": 1,
+    "fields": {
+        "symposium": "SCE",
+        "title": "International Symposium on Sustainable and Clean Energy"
+    }
+  },
+  {
+    "model": "events.tracks",
+    "pk": 2,
+    "fields": {
+        "symposium": "IT",
+        "title": "International Symposium on Infrastructure, and transport"
+    }
+  },
+  {
+    "model": "events.tracks",
+    "pk": 3,
+    "fields": {
+        "symposium": "AME",
+        "title": "International Symposium on Advances in Mechanical Engineering"
+    }
+  },
+  {
+    "model": "events.tracks",
+    "pk": 4,
+    "fields": {
+        "symposium": "BBE",
+        "title": "International Symposium on Biotechnology and Bioprocess Engineering"
+    }
+  },
+  {
+    "model": "events.tracks",
+    "pk": 5,
+    "fields": {
+        "symposium": "CPE",
+        "title": "International Symposium on Chemical Process and Engineering"
+    }
+  },
+  {
+    "model": "events.tracks",
+    "pk": 6,
+    "fields": {
+        "symposium": "SBCC",
+        "title": "International Symposium on Sustainable Building, City, and Community"
+    }
+  },
+  {
+    "model": "events.tracks",
+    "pk": 7,
+    "fields": {
+        "symposium": "ECE",
+        "title": "International Symposium on Electrical and Computer Engineering"
+    }
+  },
+  {
+    "model": "events.tracks",
+    "pk": 8,
+    "fields": {
+        "symposium": "MME",
+        "title": "International Symposium on Metallurgy and Materials Engineering"
+    }
+  },
+  {
+    "model": "events.tracks",
+    "pk": 9,
+    "fields": {
+        "symposium": "IE",
+        "title": "International Symposium on Industrial Engineering"
+    }
+  },
+  {
+    "model": "events.tracks",
+    "pk": 10,
+    "fields": {
+        "symposium": "ISBE",
+        "title": "International Symposium on Biomedical Engineering"
+    }
+  }
+]

@@ -1,0 +1,249 @@
+[
+  {
+    "model": "events.eventsparallel",
+    "pk": "p1",
+    "fields": {
+        "eventId": "event13",
+        "date": "23-07-2019",
+        "startTime": "13:00",
+        "endTime": "18:00",
+        "program": "Infrastructure, and transport",
+        "speaker": "",
+        "place": "OMBILIN 1"
+    }
+  },
+  {
+    "model": "events.eventsparallel",
+    "pk": "p2",
+    "fields": {
+        "eventId": "event13",
+        "date": "23-07-2019",
+        "startTime": "13:00",
+        "endTime": "18:00",
+        "program": "Advances in Mechanical Engineering",
+        "speaker": "",
+        "place": "ANAI 1-2"
+    }
+  },
+  {
+    "model": "events.eventsparallel",
+    "pk": "p3",
+    "fields": {
+        "eventId": "event13",
+        "date": "23-07-2019",
+        "startTime": "13:00",
+        "endTime": "18:00",
+        "program": "Biotechnology and Bioprocess Engineering",
+        "speaker": "",
+        "place": "SEMPUR, SINAMAR"
+    }
+  },
+  {
+    "model": "events.eventsparallel",
+    "pk": "p4",
+    "fields": {
+        "eventId": "event13",
+        "date": "23-07-2019",
+        "startTime": "13:00",
+        "endTime": "18:00",
+        "program": "Chemical Process and Engineering",
+        "speaker": "",
+        "place": "OMBILIN 2-3"
+    }
+  },
+  {
+    "model": "events.eventsparallel",
+    "pk": "p5",
+    "fields": {
+        "eventId": "event13",
+        "date": "23-07-2019",
+        "startTime": "13:00",
+        "endTime": "18:00",
+        "program": "Sustainable Building, City, and Community",
+        "speaker": "",
+        "place": "KUANTAN 1-2"
+    }
+  },
+  {
+    "model": "events.eventsparallel",
+    "pk": "p6",
+    "fields": {
+        "eventId": "event13",
+        "date": "23-07-2019",
+        "startTime": "13:00",
+        "endTime": "18:00",
+        "program": "Electrical and Computer Engineering",
+        "speaker": "",
+        "place": "ARAI"
+    }
+  },
+  {
+    "model": "events.eventsparallel",
+    "pk": "p7",
+    "fields": {
+        "eventId": "event13",
+        "date": "23-07-2019",
+        "startTime": "13:00",
+        "endTime": "18:00",
+        "program": "Metallurgy and Materials Engineering",
+        "speaker": "",
+        "place": "TARUSAN 1-2"
+    }
+  },
+  {
+    "model": "events.eventsparallel",
+    "pk": "p8",
+    "fields": {
+        "eventId": "event13",
+        "date": "23-07-2019",
+        "startTime": "13:00",
+        "endTime": "18:00",
+        "program": "Industrial Engineering",
+        "speaker": "",
+        "place": "KUANTAN 3"
+    }
+  },
+  {
+    "model": "events.eventsparallel",
+    "pk": "p9",
+    "fields": {
+        "eventId": "event13",
+        "date": "23-07-2019",
+        "startTime": "13:00",
+        "endTime": "18:00",
+        "program": "Biomedical Engineering",
+        "speaker": "",
+        "place": "SEMPUR, SINAMAR"
+    }
+  },
+  {
+    "model": "events.eventsparallel",
+    "pk": "p10",
+    "fields": {
+        "eventId": "event16",
+        "date": "24-07-2019",
+        "startTime": "8:00",
+        "endTime": "18:00",
+        "program": "Sustainable and Clean Energy",
+        "speaker": "",
+        "place": "OMBILIN 1"
+    }
+  },
+  {
+    "model": "events.eventsparallel",
+    "pk": "p11",
+    "fields": {
+        "eventId": "event16",
+        "date": "24-07-2019",
+        "startTime": "10:15",
+        "endTime": "12:00",
+        "program": "Infrastructure, and transport",
+        "speaker": "",
+        "place": "KUANTAN 1-2"
+    }
+  },
+  {
+    "model": "events.eventsparallel",
+    "pk": "p12",
+    "fields": {
+        "eventId": "event16",
+        "date": "24-07-2019",
+        "startTime": "8:00",
+        "endTime": "18:00",
+        "program": "Advances in Mechanical Engineering",
+        "speaker": "",
+        "place": "ANAI 1-2, KUANTAN 3"
+    }
+  },
+  {
+    "model": "events.eventsparallel",
+    "pk": "p13",
+    "fields": {
+        "eventId": "event16",
+        "date": "24-07-2019",
+        "startTime": "8:00",
+        "endTime": "18:00",
+        "program": "Biotechnology and Bioprocess Engineering",
+        "speaker": "",
+        "place": "SEMPUR"
+    }
+  },
+  {
+    "model": "events.eventsparallel",
+    "pk": "p14",
+    "fields": {
+        "eventId": "event16",
+        "date": "24-07-2019",
+        "startTime": "8:00",
+        "endTime": "18:00",
+        "program": "Chemical Process and Engineering",
+        "speaker": "",
+        "place": "OMBILIN 2-3"
+    }
+  },
+  {
+    "model": "events.eventsparallel",
+    "pk": "p15",
+    "fields": {
+        "eventId": "event16",
+        "date": "24-07-2019",
+        "startTime": "8:00",
+        "endTime": "18:00",
+        "program": "Sustainable Building, City, and Community",
+        "speaker": "",
+        "place": "KUANTAN 1-2"
+    }
+  },
+  {
+    "model": "events.eventsparallel",
+    "pk": "p16",
+    "fields": {
+        "eventId": "event16",
+        "date": "24-07-2019",
+        "startTime": "8:00",
+        "endTime": "18:00",
+        "program": "Electrical and Computer Engineering",
+        "speaker": "",
+        "place": "ARAI"
+    }
+  },
+  {
+    "model": "events.eventsparallel",
+    "pk": "p17",
+    "fields": {
+        "eventId": "event16",
+        "date": "24-07-2019",
+        "startTime": "8:00",
+        "endTime": "18:00",
+        "program": "Metallurgy and Materials Engineering",
+        "speaker": "",
+        "place": "TARUSAN 1-2"
+    }
+  },
+  {
+    "model": "events.eventsparallel",
+    "pk": "p18",
+    "fields": {
+        "eventId": "event16",
+        "date": "24-07-2019",
+        "startTime": "8:00",
+        "endTime": "14:00",
+        "program": "Industrial Engineering",
+        "speaker": "",
+        "place": "KUANTAN 3"
+    }
+  },
+  {
+    "model": "events.eventsparallel",
+    "pk": "p19",
+    "fields": {
+        "eventId": "event16",
+        "date": "24-07-2019",
+        "startTime": "8:00",
+        "endTime": "18:00",
+        "program": "Biomedical Engineering",
+        "speaker": "",
+        "place": "SEMPUR, SINAMAR, BATANDANG"
+    }
+  }
+]

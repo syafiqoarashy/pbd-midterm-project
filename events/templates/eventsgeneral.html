@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+ {% block content %}
+
+  <table>
+    <tr>
+      <th>Date</th>
+      <th>Start Time</th>
+      <th>End Time</th>
+      <th>Program</th>
+      <th>Speaker</th>
+      <th>Place</th>
+    </tr>
+    {% comment %} Add the data below this line {% endcomment %}
+    {% for item in list_item %}
+    <tr>
+        <th>{{item.date}}</th>
+        <th>{{item.startTime}}</th>
+        <th>{{item.endTime}}</th>
+        <th>{{item.program}}</th>
+        <th>{{item.speaker.name}}</th>
+        <th>{{item.place}}</th>
+    </tr>
+
+    {% endfor %}
+  </table>
+
+ {% endblock content %}
