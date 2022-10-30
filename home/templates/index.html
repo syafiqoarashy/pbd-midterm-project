@@ -13,7 +13,7 @@
         <div class="flex-1 md:flex md:items-center md:gap-12">
           <a class="block text-[#412D7E] font-semibold flex flex-row h-24 gap-2" href="/">
             <img clas='mt-3' src="{% static 'home/acb_isbe.png' %}" alt="ACB-ISBE">
-            <div class="hidden md:flex text-xl items-center justify between">
+            <div class="hidden md:flex text-xl items-center justify-between">
               <h1 class="font-bold">ACB-</h1>
               <h1 class="font-medium">ISBE</h1>
             </div>
@@ -94,7 +94,7 @@
           <div class="flex items-center gap-4">
             <div class="sm:flex sm:gap-4">
               <a
-                class="rounded-md bg-[#412D7E] px-5 py-2.5 text-sm font-medium text-white shadow"
+                class="rounded-md bg-[#412D7E] h-full px-5 py-2.5 text-sm font-medium text-white shadow"
                 href="/"
               >
                 Login
@@ -136,11 +136,10 @@
     </div>
   </header>
   <section
+
   class="relative bg-[url({% static 'home/banner.jpeg' %})] bg-cover bg-center bg-no-repeat"
 >
-  <div
-    class="absolute inset-0 bg-white/75 sm:bg-transparent sm:bg-gradient-to-r sm:from-white/95 sm:to-white/25"
-  ></div>
+  <div class="absolute inset-0 bg-white/75 sm:bg-transparent sm:bg-gradient-to-r sm:from-white/95 sm:to-white/25"></div>
 
   <div
     class="relative mx-auto max-w-screen-xl px-4 py-32 sm:px-6 lg:flex lg:h-screen lg:items-center lg:px-8"
@@ -154,7 +153,7 @@
         </strong>
       </h1>
 
-      <p class="mt-4 max-w-lg sm:text-xl sm:leading-relaxed">
+      <p class="mt-4 max-w-lg sm:text-xl font-medium sm:leading-relaxed">
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt illo
         tenetur fuga ducimus numquam ea!
       </p>
@@ -177,6 +176,125 @@
     </div>
   </div>
 </section>
+  <div class="sm:text-4xl text-2xl mt-16 font-bold flex items-center justify-center">
+    <div class="flex w-24 border-t border-black"></div>
+    <span class="flex-shrink mx-4 ">Conference Info</span>
+    <div class="flex w-24 border-t border-black"></div>
+  </div>
+  <div id='information' class="flex items-center flex-row text-2xl text-black justify-center gap-4 p-16 mb-3 mx-4">
+    <article class="overflow-hidden rounded-lg border border-gray-100 shadow-sm">
+      <img
+        alt="Office"
+        src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+        class="h-56 w-full object-cover"
+      />
+
+      <div class="p-4 sm:p-6">
+        <a href="#">
+          <h3 class="text-lg font-medium text-gray-900">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </h3>
+        </a>
+
+        <p class="mt-2 text-sm leading-relaxed text-gray-500 line-clamp-3">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae
+          dolores, possimus pariatur animi temporibus nesciunt praesentium dolore
+          sed nulla ipsum eveniet corporis quidem, mollitia itaque minus soluta,
+          voluptates neque explicabo tempora nisi culpa eius atque dignissimos.
+          Molestias explicabo corporis voluptatem?
+        </p>
+
+        <a
+          href="#"
+          class="group mt-4 inline-flex items-center gap-1 text-sm font-medium text-blue-600"
+        >
+          Find out more
+
+          <span
+            aria-hidden="true"
+            class="block transition group-hover:translate-x-0.5"
+          >
+            &rarr;
+          </span>
+        </a>
+      </div>
+    </article>
+    <article class="overflow-hidden rounded-lg border border-gray-100 shadow-sm">
+      <img
+        alt="Office"
+        src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+        class="h-56 w-full object-cover"
+      />
+
+      <div class="p-4 sm:p-6">
+        <a href="#">
+          <h3 class="text-lg font-medium text-gray-900">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </h3>
+        </a>
+
+        <p class="mt-2 text-sm leading-relaxed text-gray-500 line-clamp-3">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae
+          dolores, possimus pariatur animi temporibus nesciunt praesentium dolore
+          sed nulla ipsum eveniet corporis quidem, mollitia itaque minus soluta,
+          voluptates neque explicabo tempora nisi culpa eius atque dignissimos.
+          Molestias explicabo corporis voluptatem?
+        </p>
+
+        <a
+          href="#"
+          class="group mt-4 inline-flex items-center gap-1 text-sm font-medium text-blue-600"
+        >
+          Find out more
+
+          <span
+            aria-hidden="true"
+            class="block transition group-hover:translate-x-0.5"
+          >
+            &rarr;
+          </span>
+        </a>
+      </div>
+    </article>
+    <article class="overflow-hidden rounded-lg border border-gray-100 shadow-sm">
+      <img
+        alt="Office"
+        src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+        class="h-56 w-full object-cover"
+      />
+
+      <div class="p-4 sm:p-6">
+        <a href="#">
+          <h3 class="text-lg font-medium text-gray-900">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </h3>
+        </a>
+
+        <p class="mt-2 text-sm leading-relaxed text-gray-500 line-clamp-3">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae
+          dolores, possimus pariatur animi temporibus nesciunt praesentium dolore
+          sed nulla ipsum eveniet corporis quidem, mollitia itaque minus soluta,
+          voluptates neque explicabo tempora nisi culpa eius atque dignissimos.
+          Molestias explicabo corporis voluptatem?
+        </p>
+
+        <a
+          href="#"
+          class="group mt-4 inline-flex items-center gap-1 text-sm font-medium text-blue-600"
+        >
+          Find out more
+
+          <span
+            aria-hidden="true"
+            class="block transition group-hover:translate-x-0.5"
+          >
+            &rarr;
+          </span>
+        </a>
+      </div>
+    </article>
+
+  </div>
 
 </body>
 {% endblock content %}
