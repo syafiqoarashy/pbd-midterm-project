@@ -2,16 +2,16 @@
 {% load static %}
 
 {% block meta %}
-<title>Hello, world!</title>
+<title>Home</title>
 {% endblock meta %}
 
 {% block content %}
 <body>
-  <header aria-label="Site Header" class="shadow-xl bg-white">
+  <header aria-label="Site Header" class="top-0 shadow-xl bg-white">
     <div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
       <div class="flex h-24 items-center justify-between">
         <div class="flex-1 md:flex md:items-center md:gap-12">
-          <a class="block text-[#412D7E] font-semibold flex flex-row h-24 gap-2" href="/">
+          <a class="block text-[#412D7E] hover:text-[#FED307] font-semibold flex flex-row h-24 gap-2" href="/">
             <img clas='mt-3' src="{% static 'home/acb_isbe.png' %}" alt="ACB-ISBE">
             <div class="hidden md:flex text-xl items-center justify-between">
               <h1 class="font-bold">ACB-</h1>
@@ -313,6 +313,18 @@
     <img class='object-contain p-8 w-10/12' src="{% static 'home/venue_map.png' %}" alt="Map">
   </section>
   
+  <div class="text-3xl font-bold flex flex-shrink items-center justify-center">
+    <div class="flex w-24 border-t border-black"></div>
+    <span class="flex shrink mx-4 text-center">Contact</span>
+    <div class="flex w-24 border-t border-black"></div>
+  </div>
+
+  <form method="POST" action=".">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button>Submit</button>
+  </form>
+
   <footer aria-label="Site Footer" class="bg-gray-50 mt-8">
     <div class="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 lg:px-8">
       <div class="sm:flex sm:items-center sm:justify-between">
