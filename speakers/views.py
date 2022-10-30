@@ -14,9 +14,7 @@ class search_speakers(ListView):
     
     def get_queryset(self): # new
         query = self.request.GET.get("q")
-        object_list = Speakers.objects.filter(
-            Q(name__icontains=query) | Q(state__icontains=query)
-        )
+        object_list = Speakers.objects.filter(name__icontains=query)
         return object_list
 
 def show_speakers(request):
