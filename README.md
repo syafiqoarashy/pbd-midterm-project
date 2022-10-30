@@ -2,6 +2,8 @@
 
 ## A Proceeding Conference App
 
+## Landing Page Branch by Syafiqo
+
 ### GROUP 3
 
 1. Syafiqo Arashy Octaviano - 2106657821
