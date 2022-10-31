@@ -120,11 +120,19 @@
     </div>
   </header>
 
+<div class="bg-gray-900 text-indigo-400 flex justify-between justify-right sticky top-6 pl-6 pt-4 pr-6">
+    <div class="bg-gray-900 rounded w-24 h-12 flex right-0">
+        <a class="align-center justify-center text-2xl w-24" href="/parallel_sessions/">Go Back</a>
+    </div>
+    <form action="" class="search-form">
+      <input type="text" class="search" placeholder="search">
+    </form>
+</div>
 
   <section class="text-gray-400 bg-gray-900 body-font overflow-hidden">
     <div class="container px-5 py-24 mx-auto">
       <div class="-my-8 divide-y-2 divide-gray-800">
-        {% for item in It %}
+        {% for item in IT %}
         <div class="py-8 flex flex-nowrap md:flex-nowrap">
           <div class="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
             <span class="font-semibold title-font text-white">{{item.date}}</span>

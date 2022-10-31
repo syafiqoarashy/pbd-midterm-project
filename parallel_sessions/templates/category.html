@@ -129,9 +129,9 @@
         <p class="lg:w-1/2 w-full leading-relaxed text-opacity-80"></p>
       </div>
       
-      <div class="flex flex-wrap -m-4">
+      <div class="flex flex-wrap -m-4" id="cards">
         {% for item in tracks %}
-        <div class="xl:w-1/3 md:w-1/2 p-4">
+        <div class="xl:w-1/3 md:w-1/2 p-4" id="card">
           <a class="title" id="{{item.symposium}}" href="\parallel_sessions\{{item.symposium}}" >  
           <div class="transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-110 duration-250 border border-gray-700 border-opacity-75 p-6 rounded-lg">
             <div class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-gray-800 text-indigo-400 mb-4">
@@ -149,4 +149,28 @@
   </section>    
     
 
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+    $(document).ready(() => {
+        const card = item => `<div class="xl:w-1/3 md:w-1/2 p-4" id="card">
+          <a class="title" id="${item.field.symposium}" href="\parallel_sessions\ ${item.fields.symposium}" >  
+          <div class="transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-110 duration-250 border border-gray-700 border-opacity-75 p-6 rounded-lg">
+            <div class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-gray-800 text-indigo-400 mb-4">
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
+                <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+              </svg>
+            </div>
+            <h2 class="text-lg text-white font-medium title-font mb-2">${item.fields.title}</h2>
+            <p class="leading-relaxed text-base">${item.fields.symposium}</p>
+          </div>
+          </a>
+        </div>
+        `
+
+        const renderItem = () => {
+            $.get()
+        }
+    })
+</script>
 {% endblock content %}

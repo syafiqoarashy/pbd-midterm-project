@@ -1,7 +1,7 @@
 from django.urls import path
 from .views import show_sessions, category, AME, BBE, CPE, ECE, IE, ISBE, IT, MME, SBCC, SCE
 
-app_name = 'sessions'
+app_name = 'parallel_sessions'
 
 urlpatterns = [
     path('', category, name='category'),
