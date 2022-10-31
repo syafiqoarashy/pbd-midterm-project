@@ -3,10 +3,17 @@
 ## A Proceeding Conference App
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 ## Speakers Branch by Azra
 =======
 ## Landing Page Branch by Syafiqo
 >>>>>>> cb7553e (branch creation)
+=======
+## Landing Page Branch by Syafiqo
+=======
+## Speakers Branch by Azra
+>>>>>>> 09a59b9 (finished models, json, and (some) htmls)
+>>>>>>> d0e944f (resolve conflict)
 
 ### GROUP 3
 
