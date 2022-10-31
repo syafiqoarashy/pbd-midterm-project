@@ -5,6 +5,7 @@ from django.http import HttpResponse
 from django.core import serializers
 
 def show_submission(request):
+    global submission_filter
     track_data = Track.objects.all()
     submission_data = Submission.objects.all()
     submission_filter = SubmissionFilter(request.GET, queryset=submission_data)
@@ -20,6 +21,4 @@ def show_details_by_id(request, id):
     return render(request, "details.html", context)
 
 def show_json(request):
-    submission_data = Submission.objects.all()
-    submission_filter = SubmissionFilter(request.GET, queryset=submission_data)
     return HttpResponse(serializers.serialize("json", submission_filter.qs), content_type="application/json")
