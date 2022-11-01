@@ -1,6 +1,8 @@
+import datetime
 from django.shortcuts import render
 from events.models import EventsGeneral, EventsParallel
-import datetime
+from django.http import HttpResponse
+from django.core import serializers
 
 # Create your views here.
 def show_events_general(request):
@@ -46,3 +48,8 @@ def show_events_general25(request):
     }
 
     return render(request, "eventsgeneral25.html", context)
+
+
+def show_json(request):
+    data = EventsGeneral.objects.all()
+    return HttpResponse(serializers.serialize("json", data), content_type="application/json")
