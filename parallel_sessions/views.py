@@ -3,6 +3,8 @@ from django.shortcuts import render
 # Create your views here.
 from django.shortcuts import render
 from .models import Sessions, Tracks, SessionsMME,SessionsSCE,SessionsAME,SessionsIT,SessionsECE,SessionsIE,SessionsSBCC,SessionsBBE,SessionsCPE,SessionsISBE
+from django.core import serializers
+from django.http import HttpResponse
 
 # Create your views here.
 def show_sessions(request):
@@ -113,5 +115,7 @@ def SCE(request) :
     }
     return render(request, 'SCE.html', context)
 
-
+def show_json_category(request):
+    data = Tracks.objects.all()
+    return HttpResponse(serializers.serialize("json", data), content_type="application/json")
 

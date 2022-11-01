@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import show_sessions, category, AME, BBE, CPE, ECE, IE, ISBE, IT, MME, SBCC, SCE
+from .views import show_sessions, category, AME, BBE, CPE, ECE, IE, ISBE, IT, MME, SBCC, SCE, show_json_category
 
 app_name = 'parallel_sessions'
 
@@ -16,4 +16,6 @@ urlpatterns = [
     path('MME', MME, name="MME"),
     path('SBCC', SBCC, name="SBCC"),
     path('SCE', SCE, name="SCE"),
+    path('json_category/', show_json_category, name="json_category"),
+    
 ]

@@ -67,7 +67,7 @@
               <li>
                 <a
                   class="transition hover:text-[#FED307]"
-                  href="/parallel_sessions/"
+                  href="{% url 'parallel_sessions:category' %}"
                 >
                   Sessions
                 </a>
@@ -79,7 +79,7 @@
             <div class="sm:flex sm:gap-4">
               <a
                 class="rounded-md bg-[#412D7E] h-full px-5 py-2.5 text-sm font-medium text-white shadow"
-                href=""
+                href="{% url 'home:login' %}"
               >
                 Login
               </a>
@@ -87,7 +87,7 @@
               <div class="hidden sm:flex">
                 <a
                   class="rounded-md bg-gray-100 px-5 py-2.5 text-sm font-medium text-[#1C3265]"
-                  href=""
+                  href="{% url 'home:register' %}"
                 >
                   Register
                 </a>
@@ -121,8 +121,8 @@
   </header>
 
 <div class="bg-gray-900 text-indigo-400 flex right-0 justify-right sticky top-6 pl-6 pt-4">
-    <div class="bg-gray-900 rounded w-24 h-12 flex right-0">
-        <a class="align-center justify-center text-2xl w-24" href="/parallel_sessions/">Go Back</a>
+    <div class="bg-[#412D7E] rounded w-24 h-10 flex justify-center items-center rounded">
+      <a class="bg-[#412D7E] rounded text-1.5xl w-24 self-center h-10 text-slate-100 top-12 flex justify-center p-2" href="{% url 'parallel_sessions:category' %}">Go Back</a>
     </div>
 </div>
 
@@ -138,8 +138,8 @@
           <div class="md:flex-grow">
             <h2 class="text-2xl font-medium text-white title-font mb-2">{{item.paper}}</h2>
             <p class="leading-relaxed">{{item.author}}</p>
-            <a class="text-indigo-400 inline-flex items-center mt-4">{{item.location}}
-            </a>
+            <p class="text-indigo-400 inline-flex items-center mt-4">{{item.location}}
+            </p>
           </div>
         </div>
         {% endfor %}
