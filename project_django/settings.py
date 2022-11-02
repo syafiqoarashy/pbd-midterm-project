@@ -45,7 +45,8 @@ INSTALLED_APPS = [
     'django_rename_app',
     'home',
     'parallel_sessions',
-    'submission'
+    'submission',
+    'authors'
     
 ]
 
