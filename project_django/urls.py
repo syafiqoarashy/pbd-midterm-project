@@ -20,6 +20,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('home.urls')),
     path('parallel_sessions/', include('parallel_sessions.urls')),
+    path('submission/', include('submission.urls')),
 ]
 
 # TODO: Implement Routings Here
