@@ -20,6 +20,7 @@ entrypoints==0.4
 executing==1.0.0
 fastjsonschema==2.16.1
 fonttools==4.37.1
+django.filter==22.1
 gunicorn==20.1.0
 idna==3.3
 ipykernel==6.15.2
