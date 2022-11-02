@@ -1,5 +1,5 @@
 from django.urls import path
-from home.views import landing, login_user, register, landing_logged, show_data_json,create_testimonial
+from home.views import landing, login_user, register, landing_logged, render_test, show_data_json,create_testimonial
 
 
 app_name = 'home'
@@ -11,4 +11,5 @@ urlpatterns = [
     path('register/', register, name='register'),
     path('json/', show_data_json, name='show_data_json'),
     path('add/', create_testimonial, name='add'),
+    path('test/', render_test, name='test'),
 ]

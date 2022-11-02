@@ -28,6 +28,9 @@ def landing(request):
     }   
     return render(request, "index.html", context)
 
+def render_test(request):
+    return render(request, "test_index.html")
+
 def login_user(request):
     if request.method == 'POST':
         username = request.POST.get('username')
