@@ -1,76 +1,238 @@
 {% extends 'base.html' %}
+{% load static %}
+
+{% block meta %}
+<title>Speakers</title>
+{% endblock meta %}
 
 {% block content %}
 
-<nav class="bg-white px-2 sm:px-4 py-2.5 dark:bg-gray-900 w-full z-20 sticky top-0 left-0 border-b border-gray-200 dark:border-gray-600">
-    <div class="container flex flex-wrap justify-between items-center mx-auto">
-    <a href="https://flowbite.com/" class="flex items-center">
-        <img src="data:image/png;base64,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" class="mr-3 h-6 sm:h-9" alt="ISBE 2021 Logo">
-        <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
-    </a>
-    <div class="hidden justify-between items-center w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
-    </div>
-    <ol class="inline-flex items-center space-x-1 md:space-x-3">
-      <li class="inline-flex items-center">
-        <a href="#" class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">
-          <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path></svg>
-          Home
-        </a>
-      </li>
-      <li aria-current="page">
-        <div class="flex items-center">
-          <svg class="w-6 h-6 text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
-          <span class="ml-1 text-sm font-medium text-gray-500 md:ml-2 dark:text-gray-400">Speakers</span>
+<!--Nav Bar-->
+<header aria-label="Site Header" class="top-0 shadow-xl bg-white">
+    <div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
+      <div class="flex h-24 items-center justify-between">
+        <div class="flex-1 md:flex md:items-center md:gap-12">
+          <a class="block text-[#412D7E] hover:text-[#FED307] font-semibold flex flex-row h-24 gap-2" href="/">
+            <img clas='mt-3' src="{% static 'home/acb_isbe.png' %}" alt="ACB-ISBE">
+            <div class="hidden md:flex text-xl items-center justify-between">
+              <h1 class="font-bold">ACB-</h1>
+              <h1 class="font-medium">ISBE</h1>
+            </div>
+          </a>
         </div>
-      </li>
-    </ol>
-    <div class="searchbox border-gray-400 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-100">
-      <form action="{% url 'speakers:search_speakers' %}" method="get">
-          <input name="q" type="text" class="block block p-2 pl-10 w-full text-gray-200 bg-gray-50 rounded-lg border border-gray-300 sm:text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-300 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search name of speaker..." >
-      </form>
-  </div>
-  </div>
-  </nav>
+  
+        <div class="md:flex md:items-center md:gap-12">
+          <nav aria-label="Site Nav" class="hidden lg:block">
+            <ul class="flex items-center gap-6 text-md font-normal text-[#412D7E]">
+              <li>
+                <a
+                  class="transition hover:text-[#FED307]"
+                  href="/"
+                >
+                  Home
+                </a>
+              </li>
+  
+              <li>
+                <a
+                  class="transition hover:text-[#FED307]"
+                  href="/"
+                >
+                  Authors
+                </a>
+              </li>
+  
+              <li>
+                <a
+                  class="transition hover:text-[#FED307]"
+                  href="/"
+                >
+                  Publication
+                </a>
+              </li>
+  
+              <li>
+                <a
+                  class="transition hover:text-[#FED307]"
+                  href="/"
+                >
+                  Event
+                </a>
+              </li>
+  
+              <li>
+                <a
+                  class="text-[#FED307] transition hover:text-[#FED307]"
+                  href="{% url 'speakers:show_speakers' %}"
+                >
+                  Speakers
+                </a>
+              </li>
+              <li>
+                <a
+                  class="transition hover:text-[#FED307]"
+                  href="/"
+                >
+                  Sessions
+                </a>
+              </li>
+            </ul>
+          </nav>
+  
+          <div class="flex items-center gap-4">
+            <div class="sm:flex sm:gap-4">
+              <a
+                class="rounded-md bg-[#412D7E] h-full px-5 py-2.5 text-sm font-medium text-white shadow"
+                href="{% url 'home:login' %}"
+              >
+                Login
+              </a>
+  
+              <div class="hidden sm:flex">
+                <a
+                  class="rounded-md bg-gray-100 px-5 py-2.5 text-sm font-medium text-[#1C3265]"
+                  href="{% url 'home:register' %}"
+                >
+                  Register
+                </a>
+              </div>
+            </div>
+  
+            <div class="block lg:hidden">
+              <button
+                class="rounded bg-gray-100 p-2 text-gray-600 transition hover:text-gray-600/75"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
 
-<div class="searchbox border-gray-400 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-100">
+  <!--Search Bar-->
+  <div class="searchbox border-[#FFFFFF] px-4 sm:px-4 py-2.5 dark:bg-[#FFFFFF]">
     <form action="{% url 'speakers:search_speakers' %}" method="get">
-        <input name="q" type="text" class="block block p-2 pl-10 w-full text-gray-200 bg-gray-50 rounded-lg border border-gray-300 sm:text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-300 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search name of speaker..." >
+        <input name="q" type="text" class="block block p-2 pl-10 w-full text-[#412D7E] bg-[#F3F4F6] rounded-lg border border-[#FFFFFF] sm:text-sm focus:ring-[#412D7E] focus:border-[#412D7E] dark:bg-[#F3F4F6] dark:border-[#FFFFFF] dark:placeholder-[#412D7E] dark:text-[#412D7E] dark:focus:ring-[#412D7E] dark:focus:border-[#412D7E]" placeholder="Search name of speaker..." >
     </form>
-</div>
+  </div>
 
-<div class="overflow-x-auto relative border border-gray-200">
-    <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-        <thead class="dark:bg-[#FFFBE7]">
-            <tr>
-                <th scope="col" class="py-3 px-6">
-                    Keynote Speaker
-                </th>
-                <th scope="col" class="py-3 px-6">
-                    Details
-                </th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for speakers in object_list %}
-            <tr>
-                <td rowspan="3"></td>
-                <td class="py-2 px-6">
-                    {{ speakers.name }}
-                </td>
-            </tr>
-            <tr class="border border-gray-20">
-                <td class="py-2 px-6">
-                    {{ speakers.affiliation }}
-                </td>
-            </tr>
-            <tr class="border border-gray-200">
-                <td class="py-2 px-6">
-                    {{ speakers.country }}
-                </td>
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
-</div>
+
+
+<!--Content-->
+{% for speakers in object_list %}
+<section>
+    <div class="relative mx-auto px-4 py-8">
+      <div class="grid grid-cols-1 items-start gap-4 md:grid-cols-[300px_auto]">
+        <div class="grid grid-cols-2 gap-4 md:grid-cols-1">
+          <img
+            alt="Default photo for speaker"
+            src="{% static 'speakers/default.jpeg' %}"
+            class="aspect-square w-full rounded-xl object-cover"
+          />
+        </div>
+  
+        <div class="sticky top-0">
+          <strong
+            class="rounded-full border border-blue-600 bg-gray-100 px-3 py-0.5 text-s font-medium tracking-wide text-[#412D7E]"
+          >
+            {{ speakers.type }}
+          </strong>
+  
+          <div class="mt-8 flex justify-between">
+            <div class="max-w-[35ch]">
+              <h1 class="text-2xl font-bold">
+                {{ speakers.name }}
+              </h1>
+  
+              <p class="mt-0.5 text-sm">{{ speakers.affiliation }}</p>
+            </div>
+  
+            <p class="text-lg font-bold">{{ speakers.country }}</p>
+          </div>
+  
+          <details class="group relative mt-4">
+            <summary class="block">
+                <fieldset>
+                    <legend class="mb-1 text-sm font-medium">Symposium</legend>
+                  </fieldset>
+                  <div class="prose max-w-none pb-6">
+                      <p>
+                        {{ speakers.symposium }}
+                      </p>
+                  </div>
+      
+        
+                  <fieldset class="">
+                    <legend class="mb-1 text-sm font-medium">Details</legend>
+                    <div class="prose max-w-none pb-6">
+                      <p>
+                        {{ speakers.room}}, {{ speakers.time }}
+                      </p>
+                  </div>
+                  </fieldset>
+                <div class="prose max-w-none group-open:hidden">
+                  <p>
+                    {{ speakers.profile }}
+                  </p>
+                </div>
+            </summary>
+  
+            <div class="prose max-w-none pb-6">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
+                veniam dicta beatae eos ex error culpa delectus rem tenetur,
+                architecto quam nesciunt, dolor veritatis nisi minus inventore,
+                rerum at recusandae?
+              </p>
+  
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
+                nam sapiente nobis ea veritatis error consequatur nisi
+                exercitationem iure laudantium culpa, animi temporibus non! Maxime
+                et quisquam amet. A, deserunt!
+              </p>
+            </div>
+          </details>
+  
+          <form class="mt-8">
+            <fieldset>
+              <legend class="mb-1 text-sm font-medium">Title</legend>
+            </fieldset>
+            <div class="prose max-w-none pb-6">
+                <p>
+                  {{ speakers.speechTitle }}
+                </p>
+            </div>
+
+  
+            <fieldset class="">
+              <legend class="mb-1 text-sm font-medium">Abstract</legend>
+              <div class="prose max-w-none pb-6">
+                <p>
+                  {{ speakers.speechAbstract }}
+                </p>
+            </div>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  {% endfor %}
 
 {% endblock content %}

@@ -4,6 +4,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ## Speakers Branch by Azra
 =======
 ## Landing Page Branch by Syafiqo
@@ -14,6 +15,9 @@
 ## Speakers Branch by Azra
 >>>>>>> 09a59b9 (finished models, json, and (some) htmls)
 >>>>>>> d0e944f (resolve conflict)
+=======
+## Speakers Branch by Azra
+>>>>>>> ee0a5a3 (fixed the filter and decorated html)
 
 ### GROUP 3
 
