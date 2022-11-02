@@ -43,7 +43,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'home',
-    'django_rename_app'
+    'django_rename_app',
+    'authors',
+    'submission',
+    'parallel_sessions'
 ]
 
 MIDDLEWARE = [
