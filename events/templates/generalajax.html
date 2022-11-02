@@ -132,92 +132,116 @@
     </div>
   </header>
   <div class="container flex items-center justify-center">
-    <nav class="flex border-b border-gray-100 text-sm font-medium text-[#412D7E]">
-      <a href="" class="-mb-px border-b border-current p-4 text-[#FED307]">
+    <ul class="flex border-b border-gray-100 text-sm font-medium text-[#412D7E]">
+      <li id="day1-22" class="-mb-px border-b border-transparent p-4 transition hover:text-[#FED307] active:text-[#FED307] active:border-current cursor-pointer">
         22 Sept. 2019
-      </a>
+      </li>
     
-      <a href="{% url 'events:show_events_general23' %}" class="-mb-px border-b border-transparent p-4 transition hover:text-[#FED307]">
+      <li id="day2-23" class="-mb-px border-b border-transparent p-4 transition hover:text-[#FED307] cursor-pointer">
         23 Sept. 2019
-      </a>
+      </li>
     
-      <a href="{% url 'events:show_events_general24' %}" class="-mb-px border-b border-transparent p-4 transition hover:text-[#FED307]">
+      <li id="day3-24" class="-mb-px border-b border-transparent p-4 transition hover:text-[#FED307] cursor-pointer">
         24 Sept. 2019
-      </a>
+      </li>
     
-      <a href="{% url 'events:show_events_general25' %}" class="-mb-px border-b border-transparent p-4 transition hover:text-[#FED307]">
+      <li id="day4-25" class="-mb-px border-b border-transparent p-4 transition hover:text-[#FED307] cursor-pointer">
         25 Sept. 2019
-      </a>
-    </nav>
+      </li>
+    </ul>
   </div>
-  
-  {% for item in list_item %}
-  <div class="container px-7 pb-2 items-center justify-center">
-    <article class="rounded-xl border border-gray-700 bg-[#412D7E] p-4">
-      <div class="flex items-center">
-    
-        <div class="ml-3">
-          <h3 class="text-lg font-medium text-white">{{item.program}}</h3>
-    
-          <div class="flow-root">
-            <ul class="-m-1 flex flex-wrap">
-              <li class="p-1 leading-none">
-                <h5 class="text-xs font-medium text-gray-300">{{item.startTime}} - {{item.endTime}} </h5>
-              </li>
-    
-              <li class="p-1 leading-none">
-                <h5 class="text-xs font-medium text-gray-300">{{item.place}}</h5>
-              </li>
-
-              <li class="p-1 leading-none">
-                <h5 class="text-xs font-medium text-gray-300">{{item.speaker.name}} </h5>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    
-      {% if item.isParallel %}
-        {% for item2 in list_item2 %}
-        <ul class="mt-4 space-y-2">
-          <li>
-            <a
-              href="#"
-              class="block h-full rounded-lg bg-[#533f8f] hover:bg-[#614e99] border border-700 p-4 hover:border-[#FED307]"
-            >
-              <strong class="font-medium text-white">{{item2.program.title}}</strong>
-      
-              <div class="flow-root">
-                <ul class="-m-1 flex flex-wrap">
-                  <li class="p-1 leading-none">
-                    <h5 class="text-xs font-medium text-gray-300">{{item2.startTime}} - {{item2.endTime}} </h5>
-                  </li>
-        
-                  <li class="p-1 leading-none">
-                    <h5 class="text-xs font-medium text-gray-300">{{item2.place}}</h5>
-                  </li>
-    
-                  <li class="p-1 leading-none">
-                    <h5 class="text-xs font-medium text-gray-300">{{item2.speaker.name}} </h5>
-                  </li>
-                </ul>
-              </div>
-            </a>
-          </li>
-        </ul>
-        {% endfor %}
-      {% endif %}   
-      </article>  
-
+  <div class="ajax" id="ajax">
   </div>
-  {% endfor %}
   
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script>
   $(document).ready(() => {
-    
-  })
+    const url = "{% url 'events:show_json' %}"
+    const speakers_url = "{% url 'events:show_speakers_json' %}"
+    const parallel_url = "{% url 'events:show_parallel_json' %}"
+
+    function showData(day) {
+      $.get(url, (data) => {
+
+        data.forEach((item) => {
+          var item_program = item.fields.program
+          var item_startTime = item.fields.startTime
+          var item_endTime = item.fields.endTime
+          var item_place = item.fields.place
+          var item_speaker = item.fields.speaker
+          var item_isParallel = item.fields.isParallel
+          var item_speakername = ""
+
+          if (item.fields.date === day) {
+            function getSpeakerName(item_speaker) {
+            $.get(speakers_url, (sdata) => {
+              name = sdata[item_speaker-1].fields.name;
+              return name
+            });
+            return name
+            }
+
+            if (item_speaker) {
+              item_speakername = getSpeakerName(item_speaker)
+            }
+
+
+            document.getElementById("ajax").innerHTML += `<div class="container px-7 pb-2 items-center justify-center">
+                <article class="rounded-xl border border-gray-700 bg-[#412D7E] p-4">
+                  <div class="flex items-center">
+                
+                    <div class="ml-3">
+                      <h3 class="text-lg font-medium text-white" style="font-variant:normal">`+item_program+`</h3>
+                
+                      <div class="flow-root">
+                        <ul class="-m-1 flex flex-wrap">
+                          <li class="p-1 leading-none">
+                            <h5 class="text-xs font-medium text-gray-300">`+item_startTime+ `-` +item_endTime+ `</h5>
+                          </li>
+                
+                          <li class="p-1 leading-none">
+                            <h5 class="text-xs font-medium text-gray-300">`+item_place+`</h5>
+                          </li>
+
+                          <li class="p-1 leading-none">
+                            <h5 class="text-xs font-medium text-gray-300" id="speakerid">`+item_speakername+`</h5>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>`
+          }
+        })
+      });
+    }
+
+    function dayOne() {
+      showData("2019-07-22")
+    }
+    dayOne()
+
+    $("#day1-22").click(function(){
+      $("#ajax").replaceWith(`<div class="ajax" id="ajax">`)
+      showData("2019-07-22")
+    })
+
+    $("#day2-23").click(function(){
+      $("#ajax").replaceWith(`<div class="ajax" id="ajax">`)
+      showData("2019-07-23")
+    })
+
+    $("#day3-24").click(function(){
+      $("#ajax").replaceWith(`<div class="ajax" id="ajax">`)
+      showData("2019-07-24")
+    })
+
+    $("#day4-25").click(function(){
+      $("#ajax").replaceWith(`<div class="ajax" id="ajax">`)
+      showData("2019-07-25")
+    })
+
+  });
 </script>
 
  {% endblock content %}

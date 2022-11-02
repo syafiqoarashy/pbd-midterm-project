@@ -3,6 +3,8 @@ from django.shortcuts import render
 from events.models import EventsGeneral, EventsParallel
 from django.http import HttpResponse
 from django.core import serializers
+from speakers.models import Speakers
+from submission.models import Track
 
 # Create your views here.
 def show_events_general(request):
@@ -52,4 +54,19 @@ def show_events_general25(request):
 
 def show_json(request):
     data = EventsGeneral.objects.all()
+    return HttpResponse(serializers.serialize("json", data), content_type="application/json")
+
+def show_parallel_json(request):
+    data = EventsParallel.objects.all()
+    return HttpResponse(serializers.serialize("json", data), content_type="application/json")
+
+def show_tracks_json(request):
+    data = Track.objects.all()
+    return HttpResponse(serializers.serialize("json", data), content_type="application/json")
+
+def show_events_ajax(request):
+    return render(request, "generalajax.html")
+
+def show_speakers_json(request):
+    data = Speakers.objects.all()
     return HttpResponse(serializers.serialize("json", data), content_type="application/json")
