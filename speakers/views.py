@@ -1,13 +1,7 @@
-from email.mime import application
-from unicodedata import name
-from urllib import request
 from django.shortcuts import render
 from speakers.models import Speakers
-from django.http import HttpResponseRedirect
-from django.urls import reverse
 from django.views.generic import TemplateView, ListView
 from django.http import HttpResponse
-from django.template import loader
 from django.core import serializers
 
 class HomePageView(TemplateView):
@@ -36,24 +30,12 @@ def show_speakers(request):
     'list_speakers_invited': data_speakers_invited
     }
     return render(request, 'show_speakers.html', context)
-'''
-def search_speakers(request):
-    if request.method == 'POST':
-        s_name = request.POST.get("name")
-        s = Speakers.objects.all().filter(name=s_name)
-        return HttpResponseRedirect(reverse("speakers:show_speakers"))
-    context = {}
-    return render(request, 'search_speakers.html', context)
-'''
 
 def show_speakers_info(request, id): # detailed info of speaker
     data_speakers = Speakers.objects.filter(pk=id)
-    template = loader.get_template('show_speakers_info.html')
-    #s_id = Speakers.objects.all().get(speakersId)
     context = {
         'speakers_info': data_speakers
     }
-    #return HttpResponse(template.render(context, request), content_type="application/show_speakers_info/{}".format(id))
     return render(request, 'show_speakers_info.html', context)
 
 def show_json(request):
