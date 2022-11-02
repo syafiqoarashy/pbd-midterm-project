@@ -42,8 +42,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django_rename_app',
     'home',
+    'django_rename_app',
     'parallel_sessions',
     'submission',
     'authors'
