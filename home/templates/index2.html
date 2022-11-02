@@ -87,7 +87,7 @@
       });
     };
   
-    $("#task_form").submit((event) => {
+  $("#task_form").submit((event) => {
             event.preventDefault();
             if ($("#username").val() && $("#content").val() && $("#institute").val()) {
                 $.ajax({
@@ -111,6 +111,7 @@
 
   });
 </script>
+
 <body class="bg-[#412D7E] bg-opacity-100">
   
   <div id="modal" tabindex="-1" aria-hidden="true" class="hidden bg-white bg-opacity-50 overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-screen md:h-full flex justify-center items-center">

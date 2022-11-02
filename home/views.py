@@ -83,12 +83,11 @@ def create_testimonial(request):
         else:
             messages.info(request, 'Please fill the username/content/institute!')
 
-@login_required(login_url='/todolist/login/')
+@login_required(login_url='/login/')
 def logout_user(request):
     logout(request)
     return redirect('home:login')
 
-@login_required(login_url='/todolist/login/')
 def show_data_json(request):
     data = Testimonial.objects.all()
     return HttpResponse(serializers.serialize("json", data), content_type="application/json")
