@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<hr>
+<p class="bgtext-center my-10 text-3xl font-bold">Author</p>
+
+<hr>
+{% for item in name %}
+
+<p class="text-3xl font-bold mb-5">{{item.full_name}}</p>
+<p class="text-2xl mb-5">{{item.organization}}</p>
+<p class="text-2xl mb-5">{{item.country}}</p>
+{% endfor %}
+
+<hr>
+
+
+
+
+
+
+
+
+{% endblock content %}

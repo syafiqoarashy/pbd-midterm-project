@@ -2,7 +2,11 @@
 
 ## A Proceeding Conference App
 
+<<<<<<< HEAD
 ## Landing Page Branch by Syafiqo
+=======
+## Speakers Branch by Azra
+>>>>>>> 09a59b96739f38a242ca07191ec4dfac7e9e5c92
 
 ### GROUP 3
 
@@ -12,6 +16,8 @@
 4. Azra Batrisyia Hisman - 2106656592
 5. Matthew Rizky Hartadi - 2106720941
 6. Theirry Nicole Panggabean - 2106721004
+
+Nafis Branch for submission
 
 
 ### LINK TO DEPLOYED WEBSITE

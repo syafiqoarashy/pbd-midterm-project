@@ -44,6 +44,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'home',
     'django_rename_app'
+    'speakers',
+    'events',
+    'authors',
+    'submission',
+    'parallel_sessions',
 ]
 
 MIDDLEWARE = [
