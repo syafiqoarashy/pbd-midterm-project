@@ -39,9 +39,12 @@
 
     `;
 
-    let modal = document.querySelector("#modal")
+  let modal = document.querySelector("#modal")
+  let mobile = document.querySelector("#mobile")
   let closeButton = document.querySelector("#close_testimonial")
   let openButton = document.querySelector("#open_testimonial")
+  let mobileNav = document.querySelector("#open_mobile")
+  let closeMobile = document.querySelector("#close_mobile")
 
   closeButton.addEventListener("click", () =>
     {
@@ -49,11 +52,23 @@
       modal.classList.add("hidden");
       reset();
     });
+
+  closeMobile.addEventListener("click", () =>
+    {
+      mobile.classList.remove("flex");
+      mobile.classList.add("hidden");
+    });
   
   openButton.addEventListener("click", () =>
     {
       modal.classList.add("flex");
       modal.classList.remove("hidden");
+    });
+
+  mobileNav.addEventListener("click", () =>
+    {
+      mobile.classList.add("flex");
+      mobile.classList.remove("hidden");
     });
 
   function reset(){
@@ -98,7 +113,7 @@
 </script>
 <body class="bg-[#412D7E] bg-opacity-100">
   
-  <div id="modal" tabindex="-1" aria-hidden="true" class="hidden bg-white bg-opacity-50 overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full flex justify-center items-center">
+  <div id="modal" tabindex="-1" aria-hidden="true" class="hidden bg-white bg-opacity-50 overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-screen md:h-full flex justify-center items-center">
     <div class="relative p-4 w-full max-w-md h-full md:h-auto">
         <!-- Modal content -->
         <div class="relative bg-white rounded-lg shadow">
@@ -136,6 +151,87 @@
             </div>
         </div>
     </div>
+</div> 
+
+<div id="mobile" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-screen md:h-full flex justify-center items-center">
+  <div class="relative w-full md:top-0 max-w-md h-full md:h-auto">
+      <!-- Modal content -->
+      <div class="relative bg-white rounded-lg shadow">
+          <button id="close_mobile" type="button" class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center">
+              <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+              <span class="sr-only">Close modal</span>
+          </button>
+          <a class="block ml-6 text-white hover:text-[#FED307] font-semibold flex flex-row h-16 md:h-24 gap-2" href="/">
+            <img clas='md:mt-3' src="{% static 'home/acb_isbe.png' %}" alt="ACB-ISBE">
+            <div class="hidden md:flex text-xl items-center justify-between">
+              <h1 class="font-bold">ACB-</h1>
+              <h1 class="font-medium">ISBE</h1>
+            </div>
+          </a>
+          <div class="py-6 px-6 lg:px-8">
+              <div class="flex flex-col gap-6">
+                <ul class="flex flex-col items-center gap-6 text-lg font-semibold text-[#412D7E]">
+                  <li>
+                    <a
+                      class="text-[#FED307] transition hover:text-[#FED307]"
+                      href="/"
+                    >
+                      Home
+                    </a>
+                  </li>
+      
+                  <li>
+                    <a
+                      class="transition hover:text-[#FED307]"
+                      href="/"
+                    >
+                      Authors
+                    </a>
+                  </li>
+      
+                  <li>
+                    <a
+                      class="transition hover:text-[#FED307]"
+                      href="/"
+                    >
+                      Publication
+                    </a>
+                  </li>
+      
+                  <li>
+                    <a
+                      class="transition hover:text-[#FED307]"
+                      href="/"
+                    >
+                      Event
+                    </a>
+                  </li>
+      
+                  <li>
+                    <a
+                      class="transition hover:text-[#FED307]"
+                      href="/"
+                    >
+                      Speakers
+                    </a>
+                  </li>
+    
+                  <li>
+                    <a
+                      class="transition hover:text-[#FED307]"
+                      href="/"
+                    >
+                      Sessions
+                    </a>
+                  </li>
+                </ul>
+                <a class="flex justify-center items-center rounded-md bg-[#FED307] md:h-full px-5 py-2.5 text-lg font-semibold text-white shadow-md shadow-[#EEC501] hover:-translate-y-0.5 hover:shadow-xl hover:shadow-[#614E99] transition ease-in-out duration-500" href="{% url 'home:logout' %}">
+                  Logout</a>
+            </div>
+        </div>
+                 
+      </div>
+  </div>
 </div> 
 
   <section>
@@ -214,25 +310,16 @@
             <div class="flex items-center gap-4">
               <div class="sm:flex sm:gap-4">
                 <a
-                  class="hidden lg:block rounded-md bg-[#FED307] md:h-full px-5 md:py-2.5 text-sm font-semibold text-white shadow-md shadow-[#EEC501] hover:-translate-y-0.5 hover:shadow-xl hover:shadow-[#614E99] transition ease-in-out duration-500"
+                  class="hidden lg:block rounded-md bg-[#FED307] md:h-full px-5 md:py-2.5 text-sm font-semibold text-center justify-center text-white shadow-md shadow-[#EEC501] hover:-translate-y-0.5 hover:shadow-xl hover:shadow-[#614E99] transition ease-in-out duration-500"
                   href="{% url 'home:logout' %}"
                 >
                   Logout
                 </a>
     
-                <!-- <div class="hidden sm:flex">
-                  <a
-                    class="rounded-md bg-gray-100 px-5 py-2.5 text-sm font-medium text-[#1C3265]"
-                    href="{% url 'home:register' %}"
-                  >
-                    Register
-                  </a>
-                </div>
-              </div> -->
     
               <div class="block lg:hidden">
                 <button
-                  class="rounded bg-gray-100 p-2 text-gray-600 transition hover:text-gray-600/75"
+                id="open_mobile" class="rounded bg-gray-100 p-2 text-gray-600 transition hover:text-gray-600/75"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

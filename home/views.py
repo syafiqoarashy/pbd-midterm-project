@@ -83,6 +83,7 @@ def create_testimonial(request):
         else:
             messages.info(request, 'Please fill the username/content/institute!')
 
+@login_required(login_url='/todolist/login/')
 def logout_user(request):
     logout(request)
     return redirect('home:login')
