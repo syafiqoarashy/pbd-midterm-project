@@ -186,13 +186,6 @@
     </div>
   </header>
 
-<!--Search Bar-->
-  <div class="searchbox border-[#FFFFFF] px-4 sm:px-4 py-2.5 dark:bg-[#FFFFFF]">
-    <form action="{% url 'speakers:search_speakers' %}" method="get">
-        <input name="q" type="text" class="block block p-2 pl-10 w-full text-[#412D7E] bg-[#F3F4F6] rounded-lg border border-[#FFFFFF] sm:text-sm focus:ring-[#412D7E] focus:border-[#412D7E] dark:bg-[#F3F4F6] dark:border-[#FFFFFF] dark:placeholder-[#412D7E] dark:text-white dark:focus:ring-[#412D7E] dark:focus:border-[#412D7E]" placeholder="Search name of speaker..." >
-    </form>
-  </div>
-
 <!--Content (AJAX implementation)-->
 <section class="bg-white">
     <div class="relative">
@@ -207,7 +200,7 @@
           repellendus explicabo dignissimos placeat, autem harum dolore
           reprehenderit quis! Quo totam dignissimos earum.
         </p>
-        <a href="#speakers" class="w-full text-center group mt-4 flex justify-center items-center gap-1 text-sm font-medium text-[#412D7E]">
+        <a href="#speaker" class="w-full text-center group mt-4 flex justify-center items-center gap-1 text-sm font-medium text-[#412D7E]">
           <span
           aria-hidden="true"
           class="block transition group-hover:translate-x-0.5"
@@ -216,6 +209,14 @@
         </a>
       </div>
     </div>
+
+    <!--Search Bar-->
+    <div id="speaker" class="searchbox border-[#FFFFFF] px-4 sm:px-4 py-2.5 dark:bg-[#FFFFFF]">
+      <form action="{% url 'speakers:search_speakers' %}" method="get">
+          <input name="q" type="text" class="block block p-2 pl-10 w-full text-[#412D7E] bg-[#F3F4F6] rounded-lg border border-[#FFFFFF] sm:text-sm focus:ring-[#412D7E] focus:border-[#412D7E] dark:bg-[#F3F4F6] dark:border-[#FFFFFF] dark:placeholder-[#412D7E] dark:text-white dark:focus:ring-[#412D7E] dark:focus:border-[#412D7E]" placeholder="Search name of speaker..." >
+      </form>
+    </div>
+
     <div id="speakers">
       <div class="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8">  
         <div
