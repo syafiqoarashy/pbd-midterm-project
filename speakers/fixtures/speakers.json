@@ -3,7 +3,7 @@
         "model": "speakers.speakers",
         "pk": 1,
         "fields": {
-            "id": "1",
+            "id": 1,
             "name": "Prof. Bondan Tiara Sofyan",
             "affiliation": "Directorate General of Defence Potential, Ministry of Defence",
             "country": "Indonesia",
@@ -12,7 +12,7 @@
             "photoFilename": "prof_bondan_tiara_sofyan.jpg",
             "storagePath": "speakers\/2019\/prof_bondan_tiara_sofyan.jpg",
             "speechTitle": "TOWARD STRONG DEFENCE INDUSTRIES",
-            "speechAbstract": "History of Indonesia’s defence industry started from 1958 when the excolonial companies were nationalized and then operated as national companies. In 1980, more focus was given by the formation of Defense and Security Industry Development Team. Military embargo imposed to Indonesia strengthen the program to develop defence industries with the aim to achieve independency. The latest Law No. 16\/2014 is an affirmative policy to side on national defence industry. As implementation of this law, the Ministry of Defence of Republic of Indonesia runs six policy initiatives: (1) Implementation of Local Content and Offset policy in procurement of defence products from overseas, (2) International cooperation, (3) Promotion, (4) Licensing of defence industries and blasting enterprises, (5) Production of First Articles, and (6) Seven National Priority Programs. Currently, the products of Indonesia defence industries have been used by the Indonesia National Armed Forces (TNI), such as: CN-235 MPA aircrafts, NC-212i aircrafts, Super Puma NAS 332 helicopter, NBell 412 helicopter, various types of naval ships, Anoa panser, Komodo tactical vehicles, Harimau medium tank, etc. Aside from that, Indonesia produces various rifles, pistols, ammunition, bombs, and rockets. For defence electronics, various radios, CMS (combat management system), data interlink, etc. Indonesia’s military personnel equipments, such as military uniforms, backpack, boots, parachutes, helmets, have been used in many countries. To keep the industries competitive and able to produce state-ofthe-art products needed by the users, innovation is a must. For this, involvement of universities and research institutes is necessary.",
+            "speechAbstract": "History of Indonesia's defence industry started from 1958 when the excolonial companies were nationalized and then operated as national companies. In 1980, more focus was given by the formation of Defense and Security Industry Development Team. Military embargo imposed to Indonesia strengthen the program to develop defence industries with the aim to achieve independency. The latest Law No. 16\/2014 is an affirmative policy to side on national defence industry. As implementation of this law, the Ministry of Defence of Republic of Indonesia runs six policy initiatives: (1) Implementation of Local Content and Offset policy in procurement of defence products from overseas, (2) International cooperation, (3) Promotion, (4) Licensing of defence industries and blasting enterprises, (5) Production of First Articles, and (6) Seven National Priority Programs. Currently, the products of Indonesia defence industries have been used by the Indonesia National Armed Forces (TNI), such as: CN-235 MPA aircrafts, NC-212i aircrafts, Super Puma NAS 332 helicopter, NBell 412 helicopter, various types of naval ships, Anoa panser, Komodo tactical vehicles, Harimau medium tank, etc. Aside from that, Indonesia produces various rifles, pistols, ammunition, bombs, and rockets. For defence electronics, various radios, CMS (combat management system), data interlink, etc. Indonesia’s military personnel equipments, such as military uniforms, backpack, boots, parachutes, helmets, have been used in many countries. To keep the industries competitive and able to produce state-ofthe-art products needed by the users, innovation is a must. For this, involvement of universities and research institutes is necessary.",
             "time": "2019-7-23 10:00",
             "room": "Ballroom",
             "symposium": "Plenary"
@@ -22,7 +22,7 @@
         "model": "speakers.speakers",
         "pk": 2,
         "fields": {
-            "id": "2",
+            "id": 2,
             "name": "Prof. Aya Hagishima",
             "affiliation": "Kyushu University",
             "country": "Japan",
@@ -41,7 +41,7 @@
         "model": "speakers.speakers",
         "pk": 3,
         "fields": {
-            "id": "3",
+            "id": 3,
             "name": "Prof. Eung Ryul Baek",
             "affiliation": "Yeungnam University",
             "country": "South Korea",
@@ -60,7 +60,7 @@
         "model": "speakers.speakers",
         "pk": 4,
         "fields": {
-            "id": "4",
+            "id": 4,
             "name": "Prof. dr. ir. H.J. (Erik) Heeres",
             "affiliation": "University of Groningen",
             "country": "The Netherlands",
@@ -79,7 +79,7 @@
         "model": "speakers.speakers",
         "pk": 5,
         "fields": {
-            "id": "5",
+            "id": 5,
             "name": "Prof. Masato Tominaga",
             "affiliation": "Saga University",
             "country": "Japan",
@@ -98,7 +98,7 @@
         "model": "speakers.speakers",
         "pk": 6,
         "fields": {
-            "id": "6",
+            "id": 6,
             "name": "Prof. Jerome Charmet",
             "affiliation": "Warwick University",
             "country": "England",
@@ -117,7 +117,7 @@
         "model": "speakers.speakers",
         "pk": 7,
         "fields": {
-            "id": "7",
+            "id": 7,
             "name": "Prof. Shuo-Yan Chou",
             "affiliation": "National Taiwan University of Science and Technology",
             "country": "Taiwan",
@@ -136,7 +136,7 @@
         "model": "speakers.speakers",
         "pk": 8,
         "fields": {
-            "id": "8",
+            "id": 8,
             "name": "Prof. Lisa Scharoun",
             "affiliation": "Queensland University of Technology",
             "country": "Australia",
@@ -155,7 +155,7 @@
         "model": "speakers.speakers",
         "pk": 9,
         "fields": {
-            "id": "9",
+            "id": 9,
             "name": "Prof. Alexander Paz",
             "affiliation": "Queensland University of Technology",
             "country": "Australia",
@@ -174,7 +174,7 @@
         "model": "speakers.speakers",
         "pk": 10,
         "fields": {
-            "id": "10",
+            "id": 10,
             "name": "Prof. Ruth Steiner",
             "affiliation": "University of Florida",
             "country": "USA",
@@ -193,7 +193,7 @@
         "model": "speakers.speakers",
         "pk": 11,
         "fields": {
-            "id": "11",
+            "id": 11,
             "name": "Dian K. Suprapto",
             "affiliation": "TUV Rheinland Indonesia",
             "country": "Indonesia",
@@ -211,7 +211,7 @@
         "model": "speakers.speakers",
         "pk": 12,
         "fields": {
-            "id": "12",
+            "id": 12,
             "name": "Prof. Dr.-Ing Azhar Zam",
             "affiliation": "University of Basel",
             "country": "Switzerland",
@@ -230,7 +230,7 @@
         "model": "speakers.speakers",
         "pk": 13,
         "fields": {
-            "id": "13",
+            "id": 13,
             "name": "Prof. Muhammad Hussain Ismail",
             "affiliation": "Universiti Teknologi MARA",
             "country": "Malaysia",

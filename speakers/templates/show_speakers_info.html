@@ -1,89 +1,242 @@
 {% extends 'base.html' %}
+{% load static %}
 
+{% block meta %}
+<title>Speakers</title>
+{% endblock meta %}
+ 
 {% block content %}
 
+<!--Nav Bar-->
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
 
-<nav class="flex" aria-label="Breadcrumb">
-    <ol class="inline-flex items-center space-x-1 md:space-x-3">
-      <li class="inline-flex items-center">
-        <a href="#" class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">
-          <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path></svg>
-          Home
+
+<header aria-label="Site Header" class="top-0 shadow-xl bg-white">
+  <div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
+    <div class="flex h-24 items-center justify-between">
+      <div class="flex-1 md:flex md:items-center md:gap-12">
+        <a class="block text-[#412D7E] hover:text-[#FED307] font-semibold flex flex-row h-24 gap-2" href="/">
+          <img clas='mt-3' src="{% static 'home/acb_isbe.png' %}" alt="ACB-ISBE">
+          <div class="hidden md:flex text-xl items-center justify-between">
+            <h1 class="font-bold">ACB-</h1>
+            <h1 class="font-medium">ISBE</h1>
+          </div>
         </a>
-      </li>
-      <li>
-        <div class="flex items-center">
-          <svg class="w-6 h-6 text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
-          <a href="#" class="ml-1 text-sm font-medium text-gray-700 hover:text-gray-900 md:ml-2 dark:text-gray-400 dark:hover:text-white">Speakers</a>
-        </div>
-      </li>
-      <li aria-current="page">
-        <div class="flex items-center">
-          <svg class="w-6 h-6 text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
-          <span class="ml-1 text-sm font-medium text-gray-500 md:ml-2 dark:text-gray-400">Speakers Info</span>
-        </div>
-      </li>
-      <div class="flex md:order-2">
-        <button type="button" data-collapse-toggle="navbar-search" aria-controls="navbar-search" aria-expanded="false" class="md:hidden text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 mr-1">
-          <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path></svg>
-          <span class="sr-only">Search</span>
-        </button>
-        <div class="hidden relative md:block">
-          <input type="text" id="search-navbar" class="block p-2 pl-10 w-full text-gray-900 bg-gray-50 rounded-lg border border-gray-300 sm:text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search name of speaker...">
-        </div>
-    </ol>
-  </nav>
+      </div>
 
-  <table>
-    {% for speakers in speakers_info %}
-    <tr>
-        <table>
-            <tr>
-                <th>Speaker</th>
-            </tr>
-            <tr>
-                <td rowspan="3"></td>
-                <td>{{ speakers.name }}</td>
-            </tr>
-            <tr>
-                <td>{{ speakers.affiliation }}</td>
-            </tr>
-            <tr>
-                <td>{{ speakers.country }}</td>
-            </tr>
-        </table>
-    </tr>
-    <tr>
-        <table>
-            <tr>
-                <th>Sessions</th>
-            </tr>
-            <tr>
-                <td rowspan="4"></td>
-                <td>{{ speakers.type}}</td>
-            </tr>
-            <tr>
-                <td>{{ speakers.speechtitle }}</td>
-            </tr>
-            <tr>
-                <td>{{ speakers.time }}</td>
-            </tr>
-            <tr>
-                <td>{{ speakers.room}}</td>
-            </tr>
-        </table>
-    </tr>
-    <tr>
-        <table>
-            <tr>
-                <th>Abstract</th>
-            </tr>
-            <tr>
-                <td>{{ speakers.speechAbstract }}</td>
-            </tr>
-        </table>
-    </tr>
-    {% endfor %}
-</table>
+      <div class="md:flex md:items-center md:gap-12">
+        <nav aria-label="Site Nav" class="hidden lg:block">
+          <ul class="flex items-center gap-6 text-md font-normal text-[#412D7E]">
+            <li>
+              <a
+                class="transition hover:text-[#FED307]"
+                href="/"
+              >
+                Home
+              </a>
+            </li>
+
+            <li>
+              <a
+                class="transition hover:text-[#FED307]"
+                href="{% url 'authors:show_authors' %}"
+              >
+                Authors
+              </a>
+            </li>
+
+            <li>
+              <a
+                class="transition hover:text-[#FED307]"
+                href="{% url 'submission:show_submission' %}"
+              >
+                Publication
+              </a>
+            </li>
+
+            <li>
+              <a
+                class="transition hover:text-[#FED307]"
+                href="{% url 'events:show_events_general' %}"
+              >
+                Event
+              </a>
+            </li>
+
+            <li>
+              <a
+                class="text-[#FED307] transition hover:text-[#FED307]"
+                href="{% url 'speakers:show_speakers' %}"
+              >
+                Speakers
+              </a>
+            </li>
+
+            <li>
+              <a
+                class="transition hover:text-[#FED307]"
+                href="{% url 'parallel_sessions:category' %}"
+              >
+                Sessions
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="flex items-center gap-4">
+          <div class="sm:flex sm:gap-4">
+            <a
+              class="rounded-md bg-[#412D7E] h-full px-5 py-2.5 text-sm font-medium text-white shadow"
+              href="{% url 'home:login' %}"
+            >
+              Login
+            </a>
+
+            <div class="hidden sm:flex">
+              <a
+                class="rounded-md bg-gray-100 px-5 py-2.5 text-sm font-medium text-[#1C3265]"
+                href="{% url 'home:register' %}"
+              >
+                Register
+              </a>
+            </div>
+          </div>
+
+          <div class="block lg:hidden">
+            <button
+              class="rounded bg-gray-100 p-2 text-gray-600 transition hover:text-gray-600/75"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!--Search Bar-->
+<div class="searchbox border-[#FFFFFF] px-4 sm:px-4 py-2.5 dark:bg-[#FFFFFF]">
+  <form action="{% url 'speakers:search_speakers' %}" method="get">
+      <input name="q" type="text" class="block block p-2 pl-10 w-full text-[#412D7E] bg-[#F3F4F6] rounded-lg border border-[#FFFFFF] sm:text-sm focus:ring-[#412D7E] focus:border-[#412D7E] dark:bg-[#F3F4F6] dark:border-[#FFFFFF] dark:placeholder-[#412D7E] dark:text-white dark:focus:ring-[#412D7E] dark:focus:border-[#412D7E]" placeholder="Search name of speaker..." >
+  </form>
+</div>
+
+<!--Content-->
+{% for speakers in speakers_info %}
+<section>
+    <div class="relative mx-auto px-4 py-8">
+      <div class="grid grid-cols-1 items-start gap-4 md:grid-cols-[300px_auto]">
+        <div class="grid grid-cols-2 gap-4 md:grid-cols-1">
+          <img
+            alt="Default photo for speaker"
+            src="{% static 'speakers/default.jpeg' %}"
+            class="aspect-square w-full rounded-xl object-cover"
+          />
+        </div>
+  
+        <div class="sticky top-0">
+          <strong
+            class="rounded-full border border-blue-600 bg-gray-100 px-3 py-0.5 text-s font-medium tracking-wide text-[#412D7E]"
+          >
+            {{ speakers.type }}
+          </strong>
+  
+          <div class="mt-8 flex justify-between">
+            <div class="max-w-[35ch]">
+              <h1 class="text-2xl font-bold">
+                {{ speakers.name }}
+              </h1>
+  
+              <p class="mt-0.5 text-sm">{{ speakers.affiliation }}</p>
+            </div>
+  
+            <p class="text-lg font-bold">{{ speakers.country }}</p>
+          </div>
+  
+          <details class="group relative mt-4">
+            <summary class="block">
+                <fieldset>
+                    <legend class="mb-1 text-sm font-bold">Symposium</legend>
+                  </fieldset>
+                  <div class="prose max-w-none pb-6">
+                      <p>
+                        {{ speakers.symposium }}
+                      </p>
+                  </div>
+      
+        
+                  <fieldset class="">
+                    <legend class="mb-1 text-sm font-bold">Details</legend>
+                    <div class="prose max-w-none pb-6">
+                      <p>
+                        {{ speakers.room}}, {{ speakers.time }}
+                      </p>
+                  </div>
+                  </fieldset>
+                <div class="prose max-w-none group-open:hidden">
+                  <p>
+                    {{ speakers.profile }}
+                  </p>
+                </div>
+            </summary>
+  
+            <div class="prose max-w-none pb-6">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
+                veniam dicta beatae eos ex error culpa delectus rem tenetur,
+                architecto quam nesciunt, dolor veritatis nisi minus inventore,
+                rerum at recusandae?
+              </p>
+  
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
+                nam sapiente nobis ea veritatis error consequatur nisi
+                exercitationem iure laudantium culpa, animi temporibus non! Maxime
+                et quisquam amet. A, deserunt!
+              </p>
+            </div>
+          </details>
+  
+          <form class="mt-8">
+            <fieldset>
+              <legend class="mb-1 text-sm font-bold">Title</legend>
+            </fieldset>
+            <div class="prose max-w-none pb-6">
+                <p>
+                  {{ speakers.speechTitle }}
+                </p>
+            </div>
+
+  
+            <fieldset class="">
+              <legend class="mb-1 text-sm font-bold">Abstract</legend>
+              <div class="prose max-w-none pb-6">
+                <p>
+                  {{ speakers.speechAbstract }}
+                </p>
+            </div>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  {% endfor %}
 
 {% endblock content %}
