@@ -8,8 +8,9 @@ class Track(models.Model):
 class Submission(models.Model):
     id = models.CharField(max_length=4, primary_key=True)
     trackId = models.ForeignKey(Track, on_delete=models.RESTRICT)
+    track = models.CharField(max_length=5)
     title = models.TextField()
-    authors = models.TextField()
+    authors_name = models.TextField()
     submitted = models.DateTimeField()
     lastUpdated = models.DateTimeField()
     keywords = models.TextField()

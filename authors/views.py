@@ -3,13 +3,15 @@ from django.shortcuts import render
 # Create your views here.
 from django.shortcuts import render
 
-#from authors.filters import AuthorsFilter
+from .filters import AuthorsFilter
 from .models import *
 from django.http import HttpResponse
 from django.core import serializers
+from submission.models import *
 # Create your views here.
 
 def show_authors(request):
+    global authors_filter
     authors_data = Authors.objects.all()
     authors_filter = AuthorsFilter(request.GET, queryset=authors_data)
     context = {
@@ -20,12 +22,12 @@ def show_authors(request):
 
 def show_details(request,id):
     authors_data = Authors.objects.filter(id=id)
+    submission_data = Submission.objects.filter(id=authors_data[0].submission_id)
     context = {
-        'name' : authors_data
+        'name' : authors_data,
+        'submission' : submission_data
     }
     return render(request, "authdetails.html", context)
 
 def show_json(request):
-    authors_data = Authors.objects.all()
-    authors_filter = AuthorsFilter(request.GET, queryset=authors_data)
     return HttpResponse(serializers.serialize("json", authors_filter.qs), content_type="application/json")
