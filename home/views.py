@@ -11,7 +11,7 @@ from django.urls import reverse
 from django.http import HttpResponse
 from django.core import serializers
 
-@login_required(login_url='/home/login/')
+@login_required(login_url='/login/')
 def landing_logged(request):
     testimonials = Testimonial.objects.all()
     context = {
@@ -62,7 +62,7 @@ def register(request):
     context = {'form':form}
     return render(request, 'register.html', context)
 
-@login_required(login_url='/home/login/')
+@login_required(login_url='/login/')
 def create_testimonial(request):
     if request.method == "POST":
         username = request.POST.get('username')
