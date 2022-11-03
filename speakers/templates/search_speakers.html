@@ -36,7 +36,7 @@
               <li>
                 <a
                   class="transition hover:text-[#FED307]"
-                  href="/"
+                  href="{% url 'authors:show_authors' %}"
                 >
                   Authors
                 </a>
@@ -45,7 +45,7 @@
               <li>
                 <a
                   class="transition hover:text-[#FED307]"
-                  href="/"
+                  href="{% url 'submission:show_submission' %}"
                 >
                   Publication
                 </a>
@@ -54,7 +54,7 @@
               <li>
                 <a
                   class="transition hover:text-[#FED307]"
-                  href="/"
+                  href="{% url 'events:show_events_general' %}"
                 >
                   Event
                 </a>
@@ -68,10 +68,11 @@
                   Speakers
                 </a>
               </li>
+
               <li>
                 <a
                   class="transition hover:text-[#FED307]"
-                  href="/"
+                  href="{% url 'parallel_sessions:category' %}"
                 >
                   Sessions
                 </a>

@@ -183,7 +183,7 @@
                   <li>
                     <a
                       class="transition hover:text-[#FED307]"
-                      href="/"
+                      href="{% url 'authors:show_authors' %}"
                     >
                       Authors
                     </a>
@@ -192,7 +192,7 @@
                   <li>
                     <a
                       class="transition hover:text-[#FED307]"
-                      href="/"
+                      href="{% url 'submission:show_submission' %}"
                     >
                       Publication
                     </a>
@@ -201,7 +201,7 @@
                   <li>
                     <a
                       class="transition hover:text-[#FED307]"
-                      href="/"
+                      href="{% url 'events:show_events_general' %}"
                     >
                       Event
                     </a>
@@ -210,7 +210,7 @@
                   <li>
                     <a
                       class="transition hover:text-[#FED307]"
-                      href="/"
+                      href="{% url 'speakers:show_speakers' %}"
                     >
                       Speakers
                     </a>
@@ -219,7 +219,7 @@
                   <li>
                     <a
                       class="transition hover:text-[#FED307]"
-                      href="/"
+                      href="{% url 'parallel_sessions:category' %}"
                     >
                       Sessions
                     </a>
@@ -229,7 +229,7 @@
                   Logout</a>
             </div>
         </div>
-                 
+               
       </div>
   </div>
 </div> 
@@ -263,7 +263,7 @@
                 <li>
                   <a
                     class="transition hover:text-[#FED307]"
-                    href="/"
+                    href="{% url 'authors:show_authors' %}"
                   >
                     Authors
                   </a>
@@ -272,7 +272,7 @@
                 <li>
                   <a
                     class="transition hover:text-[#FED307]"
-                    href="/"
+                    href="{% url 'submission:show_submission' %}"
                   >
                     Publication
                   </a>
@@ -281,7 +281,7 @@
                 <li>
                   <a
                     class="transition hover:text-[#FED307]"
-                    href="/"
+                    href="{% url 'events:show_events_general' %}"
                   >
                     Event
                   </a>
@@ -290,7 +290,7 @@
                 <li>
                   <a
                     class="transition hover:text-[#FED307]"
-                    href="/"
+                    href="{% url 'speakers:show_speakers' %}"
                   >
                     Speakers
                   </a>
@@ -299,7 +299,7 @@
                 <li>
                   <a
                     class="transition hover:text-[#FED307]"
-                    href="/"
+                    href="{% url 'parallel_sessions:category' %}"
                   >
                     Sessions
                   </a>
@@ -310,16 +310,25 @@
             <div class="flex items-center gap-4">
               <div class="sm:flex sm:gap-4">
                 <a
-                  class="hidden lg:block rounded-md bg-[#FED307] md:h-full px-5 md:py-2.5 text-sm font-semibold text-center justify-center text-white shadow-md shadow-[#EEC501] hover:-translate-y-0.5 hover:shadow-xl hover:shadow-[#614E99] transition ease-in-out duration-500"
+                  class="hidden lg:block rounded-md bg-[#FED307] md:h-full px-5 md:py-2.5 text-sm font-semibold text-white shadow-md shadow-[#EEC501] hover:-translate-y-0.5 hover:shadow-xl hover:shadow-[#614E99] transition ease-in-out duration-500"
                   href="{% url 'home:logout' %}"
                 >
                   Logout
                 </a>
     
+                <!-- <div class="hidden sm:flex">
+                  <a
+                    class="rounded-md bg-gray-100 px-5 py-2.5 text-sm font-medium text-[#1C3265]"
+                    href="{% url 'home:register' %}"
+                  >
+                    Register
+                  </a>
+                </div>
+              </div> -->
     
               <div class="block lg:hidden">
-                <button
-                id="open_mobile" class="rounded bg-gray-100 p-2 text-gray-600 transition hover:text-gray-600/75"
+                <button id="open_mobile"
+                  class="rounded bg-gray-100 p-2 text-gray-600 transition hover:text-gray-600/75"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
