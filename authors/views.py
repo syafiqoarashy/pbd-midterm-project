@@ -1,15 +1,12 @@
 from django.shortcuts import render
-
-# Create your views here.
-from django.shortcuts import render
-
 from .filters import AuthorsFilter
 from .models import *
 from django.http import HttpResponse
 from django.core import serializers
 from submission.models import *
-# Create your views here.
+from django.contrib.auth.decorators import login_required
 
+@login_required(login_url= "/login/")
 def show_authors(request):
     global authors_filter
     authors_data = Authors.objects.all()
@@ -20,6 +17,7 @@ def show_authors(request):
     }
     return render(request,"authors.html",context)
 
+@login_required(login_url= "/login/")
 def show_details(request,id):
     authors_data = Authors.objects.filter(id=id)
     submission_data = Submission.objects.filter(id=authors_data[0].submission_id)
@@ -29,5 +27,6 @@ def show_details(request,id):
     }
     return render(request, "authdetails.html", context)
 
+@login_required(login_url= "/login/")
 def show_json(request):
     return HttpResponse(serializers.serialize("json", authors_filter.qs), content_type="application/json")
