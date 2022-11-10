@@ -8,7 +8,7 @@ class Authors(models.Model):
     last_name = models.CharField(max_length=50)
     email = models.EmailField()
     country = models.CharField(max_length=50)
-    organization = models.CharField(max_length=100)
+    organization = models.CharField(max_length=200)
     web_page = models.URLField()
     person_id = models.IntegerField()
     correspon = models.BooleanField(null=True)
