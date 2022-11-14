@@ -3,10 +3,11 @@ from speakers.models import Speakers
 from django.views.generic import TemplateView, ListView
 from django.http import HttpResponse
 from django.core import serializers
+from django.contrib.auth.decorators import login_required
+
 
 class HomePageView(TemplateView):
     template_name = 'show_speakers.html'
-
 
 class SearchResultsView(ListView):
     model = Speakers
@@ -17,6 +18,7 @@ class SearchResultsView(ListView):
         object_list = Speakers.objects.filter(name__icontains=query)
         return object_list
 
+@login_required(login_url= "/login/")
 def show_speakers(request):
     data_speakers = Speakers.objects.all()
     data_speakers_plenary = Speakers.objects.all().filter(type="plenary")
@@ -31,6 +33,7 @@ def show_speakers(request):
     }
     return render(request, 'show_speakers.html', context)
 
+@login_required(login_url= "/login/")
 def show_speakers_info(request, id): # detailed info of speaker
     data_speakers = Speakers.objects.filter(pk=id)
     context = {
@@ -38,6 +41,7 @@ def show_speakers_info(request, id): # detailed info of speaker
     }
     return render(request, 'show_speakers_info.html', context)
 
+@login_required(login_url= "/login/")
 def show_json(request):
     data = Speakers.objects.all()
     return HttpResponse(serializers.serialize("json", data), content_type="application/json")
