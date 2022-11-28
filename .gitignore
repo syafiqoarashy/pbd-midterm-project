@@ -6,8 +6,11 @@ __pycache__
 db.sqlite3
 media
 
+<<<<<<< HEAD
 .DS_Store
 
+=======
+>>>>>>> c8fdb17 (handling DS Store)
 # Backup files # 
 *.bak 
 
@@ -139,7 +142,11 @@ GitHub.sublime-settings
 !.vscode/launch.json 
 !.vscode/extensions.json 
 .history
+<<<<<<< HEAD
 
 .DS_Store
 
 *.sqlite3
+=======
+.DS_Store
+>>>>>>> c8fdb17 (handling DS Store)
